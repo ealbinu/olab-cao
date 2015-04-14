@@ -1,0 +1,89 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Directivo')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-6
+						.lead Reporte de Maquinaria y Personal
+					.col-xs-3
+						.row
+							form(action="#").form-inline
+								.form-group
+									select(name="").form-control.input-sm
+										option(value="", disabled) Reporte
+										option(value="", selected) 2015-04-09
+										option(value="", selected) 2015-04-08
+										option(value="", selected) 2015-04-06
+									.btn.btn-primary.btn-xs
+										.fa.fa-eye  Ver
+					.col-xs-3.text-right
+						.row
+							a(href="directivo_dashboard_detalleDeLaObra.html").btn.btn-success.btn-xs
+								.fa.fa-chevron-left  Regresar
+							button.btn.btn-primary.btn-xs
+								.fa.fa-refresh
+									span.hidden-xs  Actualizar datos
+		+sidebarLeft('directivo')
+		+sidebarRight
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row 
+					.col-lg-12
+						
+						h4
+							small.text-success Obra: 
+							p
+							.fa.fa-angle-right.text-success
+							|  Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+
+				.row
+					.col-lg-6
+						.panel.panel-info
+							.panel-heading Reporte de Maquinaria
+							.panel-body
+								table.table-hover.table-condensed
+									thead
+										tr.bg-primary
+											th
+											th Maquinaria
+											th Cantidad
+									tbody
+										- for(var i=0;i<10;i++)
+											tr
+												td: img(src="_/img/avatar_maquinaria.png", alt="", width="40", height="40").img-rounded
+												td Nombre de la máquina
+												td 5004
+
+					.col-lg-6
+						.panel.panel-info
+							.panel-heading Reporte de Personal
+							.panel-body
+								table.table-hover.table-condensed
+									thead
+										tr.bg-primary
+											th Personal
+											th Cantidad
+											th
+									tbody
+										tr
+											td Ingeniero Industrial
+											td 34
+										tr
+											td Ingeniero Eléctrico
+											td 25
+										tr
+											td Ingeniero Civil
+											td 4
+
+		+sharedScripts
+		

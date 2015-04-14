@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <title>CAO | Directivo</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="http://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="_/css/_style.css"/>
+  </head>
+</html>
+<body>
+  <div id="all" class="toggled-right">
+    <header class="mainHeader">
+      <div class="navbar navbar-default navbar-fixed-top bg-success">
+        <div class="container-fluid">
+          <div class="navbar-brand"><a href="index.html"><img src="_/img/logotipo_cao.png" alt="CAO" width="140"/></a></div>
+          <div class="nav navbar-left">
+            <button type="button" id="left-menu-toggle" class="btn btn-success"><i class="fa fa-bars"> <span class="hidden-xs"> Menu</span></i></button>
+          </div>
+          <form role="search" class="navbar-form navbar-left">
+            <div class="input-group">
+              <input type="text" placeholder="Buscar" class="form-control"/>
+              <div class="input-group-btn">
+                <button class="btn btn-primary">
+                  <div class="fa fa-search"></div>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="nav navbar-right">
+            <button type="button" id="right-menu-toggle" class="btn btn-success"><i class="fa fa-users"><span class="hidden-xs"> Contactos</span></i></button>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown notificaciones col-md-12"><a href="#" data-toggle="dropdown" role="button" id="my-task-list" class="dropdown-toggle">
+                <div class="label label-danger">9</div><span id="emailUsr" class="username"> Carlos Morales <small class="label">Supervisor</small></span><img src="_/img/avatar.png" alt="Carlos Morales" width="22" class="img-circle"/>
+                <div class="caret"></div></a>
+              <ul role="menu" id="notification-list" class="dropdown-menu">
+                <li class="text-center bg-success text-success">Notificaciones</li>
+                <li class="divider"></li>
+                <li><a href="#" class="message-wrapper"><strong>Notificación 1</strong><br/><small>Texto de la primer notificación</small></a></li>
+                <li class="divider"></li>
+                <li><a href="#"><strong>Notificación 2</strong><br/><small>Texto de la segunda notificación</small></a></li>
+                <li class="divider"></li>
+                <li><a href="#"><strong>Notificación 3</strong><br/><small>Texto mucho más largo para la tercer notificación. Texto gigante. Grande. Largo y extenso.</small></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid bg-info subtitle text-info">
+        <div class="col-xs-4">
+          <div class="lead">Lista de Reportes</div>
+        </div>
+        <div class="col-xs-4">
+          <div class="row"><span class="label label-primary">1. Maquinaria y Personal</span> <span class="label">2. Evidencias</span> <span class="label">3. Minutas</span></div>
+        </div>
+        <div class="col-xs-4 text-right">
+          <div class="row">
+            <form action="#" class="form-inline">
+              <button class="btn btn-danger btn-xs">
+                <div class="fa fa-arrow-right"></div> Siguiente
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="bottomBar" class="navbar navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito1.png" alt="" width="140"/></div>
+          </div>
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito2.png" alt="" width="140"/></div>
+          </div>
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito3.png" alt="" width="140"/></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="sidebarLeft" class="scrollable panel-group">
+      <ul class="sidebar-nav">
+        <li><a href="supervisor_obras_listaDeObras" class="collapsed"><i class="fa fa-building fa-lg"></i> Lista de Obras <i class="fa fa-chevron-left"></i></a></li>
+        <li><a href="#submenu0" data-toggle="collapse" data-parent="#sidebarLeft" class="collapsed"><i class="fa fa-info-circle fa-lg"></i> Información
+            <div class="caret"></div></a>
+          <ul id="submenu0" class="panel-collapse collapse">
+            <li><a href="supervisor_obras_informacion_datosDeLaObra.html">Datos de la Obra</a></li>
+            <li><a href="supervisor_obras_informacion_graficasDeLaObra.html">Gráficas de la Obra</a></li>
+          </ul>
+        </li>
+        <li><a href="#submenu1" data-toggle="collapse" data-parent="#sidebarLeft" class="collapsed"><i class="fa fa-newspaper-o fa-lg"></i> Reportes
+            <div class="caret"></div></a>
+          <ul id="submenu1" class="panel-collapse collapse">
+            <li><a href="supervisor_obras_reportes_listaDeReportes.html">Lista de Reportes</a></li>
+            <li><a href="supervisor_obras_reportes_altaDeReporte.html">Alta de Reporte</a></li>
+            <li><a href="supervisor_obras_reportes_evidencias.html">Evidencias</a></li>
+          </ul>
+        </li>
+        <li><a href="#submenu2" data-toggle="collapse" data-parent="#sidebarLeft" class="collapsed"><i class="fa fa-calendar-o fa-lg"></i> Estimación
+            <div class="caret"></div></a>
+          <ul id="submenu2" class="panel-collapse collapse">
+            <li><a href="supervisor_obras_estimacion_listaDeEstimaciones.html">Lista de Estimaciones</a></li>
+            <li><a href="supervisor_obras_estimacion_estimacion.html">Estimación</a></li>
+          </ul>
+        </li>
+        <li><a href="supervisor_calendario.html" class="collapsed"><i class="fa fa-calendar fa-lg"></i> Calendario</a></li>
+        <li class="text-center"><br/><a href="#" class="cerrarsesion">
+            <div class="fa fa-sign-out"></div> Cerrar sesión</a><br/></li>
+      </ul>
+    </div>
+    <div id="sidebarRight" class="scrollable">
+      <ul id="contactsList" class="sidebar-nav">
+        <li>
+          <form role="search">
+            <div class="input-group">
+              <input type="text" placeholder="Buscar contacto" id="searchTerm" class="form-control"/>
+              <div class="input-group-btn">
+                <button class="btn btn-primary">
+                  <div class="fa fa-search"></div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+      <table class="contactsListTable">
+        <tbody>
+          <tr>
+            <td><a href="#user0" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user0" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user1" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user1" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user2" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user2" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user3" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user3" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user4" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user4" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user5" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user5" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user6" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user6" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user7" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user7" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user8" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user8" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user9" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user9" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user10" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user10" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user11" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user11" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user12" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user12" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user13" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user13" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user14" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user14" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user15" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user15" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user16" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user16" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user17" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user17" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="page-content-wrapper">
+      <div class="content-fluid">
+        <div class="row"> 
+          <div class="col-lg-12">
+            <h4><small class="text-success">Obra: </small>
+              <p></p>
+              <div class="fa fa-angle-right text-success"></div> Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="panel panel-info">
+              <div class="panel-heading">Reporte de Maquinaria</div>
+              <div class="panel-body">
+                <div role="tabpanel">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#m1" data-toggle="tab">Maquinaria Ligera</a></li>
+                    <li><a href="#m2" data-toggle="tab">Maquinaria Pesada</a></li>
+                    <li><a href="#m3" data-toggle="tab">Equipo</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div id="m1" class="tab-pane active"><br>
+                      <div class="row limitHeight scrollable">
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="m2" class="tab-pane"><br>
+                      <div class="row limitHeight scrollable">
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="m3" class="tab-pane"><br>
+                      <div class="row limitHeight scrollable">
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="thumbnail">
+                            <div class="caption">
+                              <p>Nombre de la maquina</p>
+                            </div><img src="_/img/avatar_maquinaria.png" alt="">
+                            <div class="caption">
+                              <form>
+                                <div class="input-group">
+                                  <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                                  <div class="input-group-btn">
+                                    <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                      <div class="fa fa-plus"></div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">Maquinaria Reportada:</div>
+              <div class="panel-footer">
+                <table class="table-hover table-condensed">
+                  <thead>
+                    <tr class="bg-primary">
+                      <th>Maquinaria</th>
+                      <th>Cantidad</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nombre de la máquina</td>
+                      <td>5004</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="panel panel-info">
+              <div class="panel-heading">Reporte de Personal</div>
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <p>Ingeniero Industrial</p>
+                      </div>
+                      <div class="col-sm-6">
+                        <form>
+                          <div class="input-group">
+                            <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                            <div class="input-group-btn">
+                              <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                <div class="fa fa-plus"></div>
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbnail">
+                  <div class="caption">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <p>Ingeniero Eléctrico</p>
+                      </div>
+                      <div class="col-sm-6">
+                        <form>
+                          <div class="input-group">
+                            <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                            <div class="input-group-btn">
+                              <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                <div class="fa fa-plus"></div>
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbnail">
+                  <div class="caption">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <p>Ingeniero Civil</p>
+                      </div>
+                      <div class="col-sm-6">
+                        <form>
+                          <div class="input-group">
+                            <input type="text" placeholder="Cantidad" class="form-control input-sm">
+                            <div class="input-group-btn">
+                              <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                                <div class="fa fa-plus"></div>
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">Personal Reportado:</div>
+              <div class="panel-footer">
+                <table class="table-hover table-condensed">
+                  <thead>
+                    <tr class="bg-primary">
+                      <th>Personal</th>
+                      <th>Cantidad</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Ingeniero Industrial</td>
+                      <td>34</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Ingeniero Eléctrico</td>
+                      <td>25</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Ingeniero Civil</td>
+                      <td>4</td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="panel panel-info">
+              <div class="panel-heading">Notas</div>
+              <div class="panel-body">
+                <div class="thumbnail">
+                  <div class="caption">
+                    <div class="row">
+                      <form>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="f1">Título</label>
+                            <input type="text" placeholder="Título de la nota" id="f1" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label for="f2">Nota</label>
+                            <textarea placeholder="Texto de la nota" id="f2" class="form-control"></textarea>
+                          </div>
+                          <div class="text-right">
+                            <button rel="tooltip" data-toggle="tooltip" title="Añadir al reporte" class="btn btn-primary btn-sm">
+                              <div class="fa fa-plus"></div> Añadir
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">Notas:</div>
+              <div class="panel-footer">
+                <table class="table-hover table-condensed">
+                  <thead>
+                    <tr class="bg-primary">
+                      <th>Nota</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> 
+                        <h4 class="text-primary">Título de nota</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rem accusamus maxime cum omnis voluptates alias quod, atque repudiandae optio saepe doloremque illum voluptatibus quae, asperiores. Nostrum dolorum, deleniti at.</p>
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <h4 class="text-primary">Título de nota</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rem accusamus maxime cum omnis voluptates alias quod, atque repudiandae optio saepe doloremque illum voluptatibus quae, asperiores. Nostrum dolorum, deleniti at.</p>
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <h4 class="text-primary">Título de nota</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rem accusamus maxime cum omnis voluptates alias quod, atque repudiandae optio saepe doloremque illum voluptatibus quae, asperiores. Nostrum dolorum, deleniti at.</p>
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <h4 class="text-primary">Título de nota</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rem accusamus maxime cum omnis voluptates alias quod, atque repudiandae optio saepe doloremque illum voluptatibus quae, asperiores. Nostrum dolorum, deleniti at.</p>
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <h4 class="text-primary">Título de nota</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rem accusamus maxime cum omnis voluptates alias quod, atque repudiandae optio saepe doloremque illum voluptatibus quae, asperiores. Nostrum dolorum, deleniti at.</p>
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <h4 class="text-primary">Título de nota</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci rem accusamus maxime cum omnis voluptates alias quod, atque repudiandae optio saepe doloremque illum voluptatibus quae, asperiores. Nostrum dolorum, deleniti at.</p>
+                      </td>
+                      <td class="text-right">
+                        <button class="btn btn-danger btn-sm">
+                          <div class="fa fa-times"> Eliminar</div>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="_/js/_/jquery.js"></script>
+    <script src="_/js/_/jquery-ui.js"></script>
+    <script src="_/js/_/bootstrap.min.js"></script>
+    <script src="_/js/_/dropzone.js"></script>
+    <script src="_/js/_/perfect-scrollbar.js"></script>
+    <script src="_/js/_/tablesaw.js"></script>
+    <script src="_/js/_/multi-select.js"></script>
+    <script src="_/js/_/quicksearch.js"></script>
+    <script src="_/js/_/swipebox.js"></script>
+    <script src="_/js/script.js"></script>
+  </div>
+</body>

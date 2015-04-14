@@ -1,0 +1,46 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Supervisor')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-6
+						.lead Subir archivos de obras
+					.col-xs-6
+						.row
+							form(action="#").form-inline
+								.col-xs-8
+									label(for="").fa.fa-file-image-o.hidden-xs.hidden-sm.hidden-md
+									select(name="").form-control.input-sm
+										option(value="", selected, disabled) Seleccione una Obra
+										option(value="0") Dragado de azolve
+								.col-xs-4
+
+		+sidebarLeft('supervisor')
+		+sidebarRight
+		
+		
+		
+	
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-lg-8.col-lg-push-2
+						.panel.panel-primary
+							.panel-heading: i.fa.fa-file-image-o  Seleccione una Obra
+							.panel-body
+								form(action="#")
+									select(name="").form-control
+										option(value="", selected, disabled) Obras actuales
+										option(value="0") Dragado de azolve
+				
+
+		
+		+sharedScripts
+		

@@ -1,0 +1,70 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Directivo')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Gráficas de la Obra
+					.col-xs-8
+					
+		+sidebarLeft('supervisor_obra')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row 
+					.col-lg-12
+						
+						h4
+							small.text-success Obra: 
+							p
+							.fa.fa-angle-right.text-success
+							|  Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+					.col-xs-6
+						.panel-group(data-toggle="collapse")#accordion1
+							.panel.panel-primary
+								.panel-heading.collapsed.text-right
+									a.db.panel-title(href="#c1", data-toggle="collapse", data-parent="#accordion1")
+										span Avance físico  
+											.fa.fa-line-chart  
+								#c1.panel-collapse.collapse.panel-body.in
+										p Gráfica
+							.panel.panel-primary
+								.panel-heading.collapsed.text-right
+									a.db.panel-title(href="#c2", data-toggle="collapse", data-parent="#accordion1")
+										span Avance financiero  
+											.fa.fa-line-chart  
+								#c2.panel-collapse.collapse.panel-body
+										p Gráfica
+					.col-xs-6
+						.panel-group(data-toggle="collapse")#accordion2
+							.panel.panel-primary
+								.panel-heading.collapsed.text-right
+									a.db.panel-title(href="#c3", data-toggle="collapse", data-parent="#accordion2")
+										span Tendencia física  
+											.fa.fa-line-chart  
+								#c3.panel-collapse.collapse.panel-body.in
+										p Gráfica
+							.panel.panel-primary
+								.panel-heading.collapsed.text-right
+									a.db.panel-title(href="#c4", data-toggle="collapse", data-parent="#accordion2")
+										span Tendencia financiera  
+											.fa.fa-line-chart  
+								#c4.panel-collapse.collapse.panel-body
+										p Gráfica
+
+
+						
+
+		+sharedScripts
+		

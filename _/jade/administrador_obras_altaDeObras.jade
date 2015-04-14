@@ -1,0 +1,247 @@
+include _mixins.jade
+include _mixins_modals.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Administrador")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Administrador')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Alta de Obras
+					.col-xs-8.text-right
+						.row
+							form(action="#").form-inline
+								button.btn.btn-danger.btn-xs
+									.fa.fa-cloud
+									|  Guardar obra nueva
+		+sidebarLeft('administrador')
+		+sidebarRight
+		
+		
+
+				
+				
+		#page-content-wrapper
+			.content-fluid
+					form(action="#")
+						.row
+							.col-lg-6
+								.form-group
+									label(for="f_2") Nombre de la obra
+									input(type="text", placeholder="Introduzca el nombre de la obra").form-control#f_3
+							.col-lg-6
+								.form-group
+									label(for="f_1") Proyecto
+									select(name="").form-control
+										option(value="", selected, disabled) Seleccionar un Proyecto
+									a(href="administrador_proyectos_altaDeProyectos.html").fa.fa-plus-circle  Nuevo Proyecto
+						.row
+							.col-lg-12
+								.form-group
+									label(for="f_3") Descripción
+									input(type="text", placeholder="Introduzca la descripción con procesos y notas sobre la obra").form-control#f_3
+						.row
+							.col-lg-6
+								.form-group
+									label(for="f_dependencia") Dependencia
+									select(name="").form-control
+										option(value="0", selected, disabled) Seleccione la Dependencia
+										option(value="1") Comisión de Agua
+									a(href="#", data-toggle="modal", data-target="#nueva_dependencia").fa.fa-plus-circle  Nueva Dependencia
+							.col-lg-6
+								.form-group
+									label(for="f_gobierno") Gobierno
+									select(name="").form-control
+										option(value="0", selected, disabled) Seleccione el Gobierno
+										option(value="1") Gobierno de la República
+									a(href="#", data-toggle="modal", data-target="#nuevo_gobierno").fa.fa-plus-circle  Nuevo Gobierno
+						.row
+							.col-lg-6
+								.form-group
+									label(for="f_secretaria") Secretaría
+									select(name="").form-control
+										option(value="0", selected, disabled) Seleccione la Secretaría
+										option(value="1") Secretaría de Medio Ambiente y Recursos Naturales
+									a(href="#", data-toggle="modal", data-target="#nueva_secretaria").fa.fa-plus-circle  Nueva Secretaría
+							.col-lg-6
+								.form-group
+									label(for="f_contratista") Empresa Contratista
+									select(name="").form-control
+										option(value="0", selected, disabled) Seleccione la empresa contratista
+										option(value="1") Construcciones y Desarrollo Macon, S.A. de C.V.
+									a(href="#", data-toggle="modal", data-target="#nuevo_contratista").fa.fa-plus-circle  Nueva Empresa Contratista
+							
+							
+						.row
+							.col-lg-6
+								.form-group
+									label(for="f_supervisor") Supervisor
+									select(name="").form-control
+										option(value="0", selected, disabled) Seleccione al supervisor de la obra
+										option(value="1") José Martín Spervi Sor
+									a(href="#", data-toggle="modal", data-target="#nuevo_supervisor").fa.fa-plus-circle  Nuevo Supervisor
+							.col-lg-6
+								.form-group
+									label(for="f_contratista") Empresa Contratista
+									select(name="").form-control
+										option(value="0", selected, disabled) Seleccione la empresa contratista
+										option(value="1") Construcciones y Desarrollo Macon, S.A. de C.V.
+									a(href="#", data-toggle="modal", data-target="#nuevo_contratista").fa.fa-plus-circle  Nueva Empresa Contratista	
+							
+						
+						.row
+							.col-lg-3
+								.form-group
+									label(for="f_4") Área
+									input(type="text", placeholder="Área").form-control#f_4
+							.col-lg-3
+								.form-group
+									label(for="f_5") Dirección
+									input(type="text", placeholder="Dirección").form-control#f_5
+							.col-lg-3
+								.form-group
+									label(for="f_6") Subdirección
+									input(type="text", placeholder="Subdirección").form-control#f_6
+							.col-lg-3
+								.form-group
+									label(for="f_7") Superintendente
+									input(type="text", placeholder="Superintendente").form-control#f_7
+									
+									
+						.row
+							.col-lg-3
+								.form-group
+									label(for="f_4") Entidad Federativa
+									select(name="").form-control
+										option(value="", selected, disabled) Elegir Entidad
+										option(value="") Distrito Federal
+							.col-lg-3
+								.form-group
+									label(for="f_5") Tipo de Contrato
+									input(type="text", placeholder="Tipo de Contrato").form-control#f_5
+							.col-lg-3
+								.form-group
+									label(for="f_6") Número de Contrato
+									input(type="text", placeholder="Número de Contrato").form-control#f_6
+							.col-lg-3
+								.form-group
+									label(for="f_7") Fecha de Contrato
+									input(type="text", placeholder="Fecha de Contrato").form-control#f_7
+									
+						- var campos = [['Fecha de Inicio del Contrato', 'Fecha de Término del Contrato', 'Periodo de ejecución en días', 'Importe contrato sin IVA'], ['Porcentaje de anticipo', 'Nombre ejercicio Fiscal 1', 'Importe Fiscal 1 sin IVA', 'Importe convenio ampliación'], ['Importe convenio reducción', 'Importe de ajustes de costos', 'Partida presupuestal', 'Anticipo'], ['Número de Fianza anticipo', 'Fecha Fianza Anticipo', 'Monto Fianza Anticipo', 'Número de Fianza Cumplimiento'], ['Fecha fianza cumplimiento', 'Monto fianza cumplimiento', 'Nombre revisión 1', 'Cargo revisión 1'], ['Nombre revisión 2', 'Cargo revisión 2', 'Nombre de quien autoriza', 'Nombre VoBo'], ['Cargo VoBo', 'Límite de Desvío']]
+						- each cm,ind in campos
+							.row
+								.col-lg-3
+									.form-group
+										label(for="#f2_#{indx}")=cm[0]
+										input(type="text", id="f2_#{indx}", placeholder=cm[0]).form-control
+								.col-lg-3
+									.form-group
+										label(for="#f2_#{indx}")=cm[1]
+										input(type="text", id="f2_#{indx}", placeholder=cm[1]).form-control
+								- if(cm[2])
+									.col-lg-3
+										.form-group
+											label(for="#f2_#{indx}")=cm[2]
+											input(type="text", id="f2_#{indx}", placeholder=cm[2]).form-control
+								- if(cm[3])
+									.col-lg-3
+										.form-group
+											label(for="#f2_#{indx}")=cm[3]
+											input(type="text", id="f2_#{indx}", placeholder=cm[3]).form-control
+						
+						.row
+							.col-lg-12
+								.form-group
+									label(for="f_ubicacion") Ubicación
+									.text-right
+									.map.fullsize.halfHeight.withFileActions Mapa
+										.fileActions
+											btn(href="#", data-toggle="tooltip", title="Eliminar puntos").btn.btn-danger.fa.fa-times
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+
+		#nueva_dependencia(tabindex="-1", role="dialog").modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", data-dismiss="modal").close
+							span.fa.fa-times
+						.modal-title.fa.fa-plus-circle  Agregar Nueva Dependencia
+					.modal-body
+						form
+							+altaEmpresa('Dependencia')
+					.modal-footer
+						.btn.btn-primary
+							.fa.fa-cloud  Guardar Depedencia
+		
+		#nueva_secretaria(tabindex="-1", role="dialog").modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", data-dismiss="modal").close
+							span.fa.fa-times
+						.modal-title.fa.fa-plus-circle  Agregar Nueva Secretaría
+					.modal-body
+						form
+							+altaEmpresa('Secretaría')
+					.modal-footer
+						.btn.btn-primary
+							.fa.fa-cloud  Guardar Secretaría
+				
+		#nuevo_gobierno(tabindex="-1", role="dialog").modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", data-dismiss="modal").close
+							span.fa.fa-times
+						.modal-title.fa.fa-plus-circle  Agregar Nuevo Gobierno
+					.modal-body
+						form
+							+altaEmpresa('Gobierno')
+					.modal-footer
+						.btn.btn-primary
+							.fa.fa-cloud  Guardar Gobierno
+							
+		#nuevo_contratista(tabindex="-1", role="dialog").modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", data-dismiss="modal").close
+							span.fa.fa-times
+						.modal-title.fa.fa-plus-circle  Agregar Nueva Empresa Contratista
+					.modal-body
+						form
+							+altaEmpresa('Contratista')
+					.modal-footer
+						.btn.btn-primary
+							.fa.fa-cloud  Guardar Empresa Contratista
+		
+		
+		#nuevo_supervisor(tabindex="-1", role="dialog").modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", data-dismiss="modal").close
+							span.fa.fa-times
+						.modal-title.fa.fa-plus-circle  Agregar Nuevo Supervisor
+					.modal-body
+						form
+							+altaUsuario('Supervisor')
+					.modal-footer
+						.btn.btn-primary
+							.fa.fa-cloud  Guardar Supervisor
+							
+
+		+sharedScripts

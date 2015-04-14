@@ -1,0 +1,121 @@
+include _mixins.jade
+include _mixins_modals.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Administrador")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Administrador')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Alta de proyectos
+					.col-xs-8.text-right
+						.row
+							form(action="#").form-inline
+								button.btn.btn-danger.btn-xs
+									.fa.fa-cloud
+									|  Guardar proyecto nuevo
+		+sidebarLeft('administrador')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					form(action="#")
+						.col-lg-12
+							.form-group
+								label(for="nombre_largo") Nombre largo del proyecto
+								input(type="text", placeholder="Introduzca el nombre completo (largo) del proyecto").form-control#nombre_largo
+							.form-group
+								label(for="nombre_corto") Nombre corto del proyecto
+								input(type="text", placeholder="Introduzca el nombre reducido (corto) del proyecto").form-control#nombre_corto
+							.form-group
+								label(for="id_Descripcion") Descripción
+								input(type="text", placeholder="Introduzca la descripción con procesos y notas sobre el proyecto").form-control#id_Descripcion
+							.row
+								.col-lg-6
+									.form-group
+										label(for="f_dependencia") Dependencia
+										select(name="").form-control#empresa
+											option(value="0", selected, disabled) Seleccione la Dependencia
+											option(value="1") Comisión de Agua
+										a(href="#", data-toggle="modal", data-target="#nueva_dependencia").fa.fa-plus-circle  Nueva Dependencia
+								.col-lg-6
+									.form-group
+										label(for="f_dependencia") Secretaría
+										select(name="").form-control#secretaria
+											option(value="0", selected, disabled) Seleccione la Secretaría
+											option(value="1") Secretaría de Medio Ambiente y Recursos Naturales
+										a(href="#", data-toggle="modal", data-target="#nueva_secretaria").fa.fa-plus-circle  Nueva Secretaría
+							.row
+								.col-lg-12
+									.form-group
+										label(for="f_directivos") Directivos
+										select.elegirDirectivos(name="", multiple="multiple", onchange="changedirectivo()").form-control#directivo
+										
+										a(href="#", data-toggle="modal", data-target="#nuevo_directivo").fa.fa-plus-circle  Nuevo Directivo
+								.col-lg-6
+								
+							.row
+								.col-lg-12
+									.form-group
+										label(for="f_ubicacion") Ubicación
+										.text-right
+										.map.fullsize.halfHeight.withFileActions Mapa
+											.fileActions
+												button(href="#", data-toggle="tooltip", title="Eliminar puntos", onclick="clearMarkers()").btn.btn-danger.fa.fa-times
+
+		
+		#nueva_dependencia(tabindex="-1", role="dialog").modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", data-dismiss="modal").close
+							span.fa.fa-times
+						.modal-title.fa.fa-plus-circle  Agregar Nueva Dependencia
+					.modal-body
+						form
+							+altaEmpresa('Dependencia')
+					.modal-footer
+						.btn.btn-primary
+							.fa.fa-cloud  Guardar Depedencia
+		
+		#nueva_secretaria(tabindex="-1", role="dialog").modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", data-dismiss="modal").close
+							span.fa.fa-times
+						.modal-title.fa.fa-plus-circle  Agregar Nueva Secretaría
+					.modal-body
+						form
+							+altaEmpresa('Secretaría')
+					.modal-footer
+						.btn.btn-primary
+							.fa.fa-cloud  Guardar Secretaría
+				
+
+		#nuevo_directivo(tabindex="-1", role="dialog").modal.fade
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button(type="button", data-dismiss="modal").close
+							span.fa.fa-times
+						.modal-title.fa.fa-plus-circle  Agregar Nuevo Directivo
+					.modal-body
+						form
+							+altaUsuario('Directivo')
+
+					.modal-footer
+						.btn.btn-primary
+							.fa.fa-cloud  Guardar Directivo
+
+		+sharedScripts
+					

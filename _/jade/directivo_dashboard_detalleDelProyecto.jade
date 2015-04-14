@@ -1,0 +1,125 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Directivo')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Detalle del Proyecto
+					.col-xs-8.text-right
+						.row
+							form(action="#").form-inline
+							
+							
+							button.btn.btn-primary.btn-xs
+								.fa.fa-refresh <span class="hidden-xs"> Actualizar datos</span>
+		+sidebarLeft('directivo')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-xs-3
+						label(for="sl_fisico") Desvío físico:  
+						span.label.label-success#sl_fisico 0%
+						br
+						br
+						.slider-range-min(data-target="#sl_fisico", data-prefix="", data-postfix="%", data-min="0", data-max="50")
+					.col-xs-3
+						label(for="sl_financiero") Desvío financiero:  
+						span.label.label-success#sl_financiero 0%
+						br
+						br
+						.slider-range-min(data-target="#sl_financiero", data-prefix="", data-postfix="%", data-min="0", data-max="50")
+					.col-xs-3
+						button.btn.btn-success.btn-xs
+								.fa.fa-repeat  Actualizar filtro
+					.col-xs-3
+						button.btn.btn-primary.btn-xs
+								.fa.fa-book  Biblioteca
+						button.btn.btn-primary.btn-xs
+								.fa.fa-envelope-o  Correo
+				br
+				br
+				.row
+					.col-xs-5
+						.panel.panel-info
+								.panel-heading.collapsed
+									.panel-title:.fa.fa-info-circle  Datos del proyecto
+								.panel-body
+									h3 Obras del Sistema Hidráulico en el Lago de Texcoco, en el Estado de México.
+									h4: .fa.fa-caret-right
+										|  Obras en el Lago de Texcoco,
+									p: .fa.fa-angle-right
+										strong  Dependencia: 
+										| Comisión Nacional del Agua
+									p: .fa.fa-angle-right
+										strong  Secretaría:  
+										| Secretaría de Medio Ambiente y Recursos Naturales
+					
+					.col-xs-7
+						.panel-group(data-toggle="collapse")#accordion
+							.panel.panel-primary
+								.panel-heading.collapsed.text-right
+									a.db.panel-title(href="#c1", data-toggle="collapse", data-parent="#accordion")
+										span Avance físico  
+											.fa.fa-line-chart  
+								#c1.panel-collapse.collapse.panel-body
+										p Gráfica
+							.panel.panel-primary
+								.panel-heading.collapsed.text-right
+									a.db.panel-title(href="#c2", data-toggle="collapse", data-parent="#accordion")
+										span Avance financiero  
+											.fa.fa-line-chart  
+								#c2.panel-collapse.collapse.panel-body
+										p Gráfica
+							.panel.panel-primary
+								.panel-heading.collapsed.text-right
+									a.db.panel-title(href="#c3", data-toggle="collapse", data-parent="#accordion")
+										span Tendencia física  
+											.fa.fa-line-chart  
+								#c3.panel-collapse.collapse.panel-body
+										p Gráfica
+							.panel.panel-primary
+								.panel-heading.collapsed.text-right
+									a.db.panel-title(href="#c4", data-toggle="collapse", data-parent="#accordion")
+										span Tendencia financiera  
+											.fa.fa-line-chart  
+								#c4.panel-collapse.collapse.panel-body
+										p Gráfica
+
+				.row
+					.col-lg-12
+						h3 Obras
+						table.table-hover.table-condensed(data-tablesaw-mode="columntoggle", data-tablesaw-minimap, data-tablesaw-sortable)
+							thead
+								tr.bg-primary
+									th(data-tablesaw-priority="persist") Obra
+									th(data-tablesaw-priority="1") Avance Físico
+									th(data-tablesaw-priority="2") Avance Financiero
+									th(data-tablesaw-priority="3") Estatus Físico
+									th(data-tablesaw-priority="4") Estatus Financiero
+									th(data-tablesaw-priority="persist") 
+							tbody
+								- for(var i=0; i<5; i++)
+									tr
+										td 
+											strong: a(href="#") Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona.
+										td 0.06%
+										td 0%
+										td 0%
+										td 0%
+										td: a(href="directivo_dashboard_detalleDeLaObra.html").btn.btn-success.btn-sm:.fa.fa-eye  Ver
+						
+
+		+sharedScripts
+		

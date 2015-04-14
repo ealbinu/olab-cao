@@ -1,0 +1,73 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Administrador")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Administrador')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-8
+						.lead Generar Reporte
+					.form-group.col-xs-4
+									button.btn.btn-primary.btn-xs
+										.fa.fa-paper-plane-o
+										|  Enviar reporte
+		+sidebarLeft('administrador')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-lg-8.col-lg-push-2
+						
+						.panel.panel-primary
+							.panel-heading.posr
+								i.fa.fa-file-image-o  Seleccione un Proyecto
+								span.label.label-success.lt 1
+							.panel-body
+								form(action="#")
+									select(name="").form-control
+										option(value="", selected, disabled) Proyectos actuales
+										option(value="0") Obras en el lago de Texcoco
+							.panel-heading.posr
+								i.fa.fa-question-circle  ¿Existe convenio?
+								span.label.label-success.lt 2
+							.panel-body
+								form
+									.row
+										.col-xs-6
+											.form-group
+												label(for="") Número de convenio
+												input(type="text", placeholder="Número de convenio").form-control 
+										.col-xs-6
+											.form-group
+												label(for="") Fecha de convenio
+												input(type="text", placeholder="Fecha de convenio").form-control 
+									.row
+										.col-xs-6
+											.form-group
+												label(for="") Importe de convenio
+												input(type="text", placeholder="Importe de convenio").form-control 
+										.col-xs-6
+											.form-group
+												label(for="") Plazo de ejecución (días naturales)
+												input(type="text", placeholder="Plazo de ejecución (días naturales)").form-control 
+									.row
+										.col-xs-6
+											.form-group
+												label(for="") Fecha de inicio
+												input(type="text", placeholder="Inicio").form-control 
+										.col-xs-6
+											.form-group
+												label(for="") Fecha de término
+												input(type="text", placeholder="Término").form-control 
+		
+
+		+sharedScripts

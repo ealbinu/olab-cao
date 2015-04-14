@@ -1,0 +1,57 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Directivo')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-3
+						.lead Galería
+					.col-xs-6
+						.row
+							form(action="#").form-inline
+								.form-group
+									input(type="text", placeholder="Fecha Inicio").datepicker.form-control.input-sm
+									input(type="text", placeholder="Fecha Fín").datepicker.form-control.input-sm
+									.btn.btn-primary.btn-xs
+										.fa.fa-eye  Ver
+					.col-xs-3.text-right
+						.row
+							a(href="directivo_dashboard_detalleDeLaObra.html").btn.btn-success.btn-xs
+								.fa.fa-chevron-left  Regresar
+							button.btn.btn-primary.btn-xs
+								.fa.fa-refresh
+									span.hidden-xs  Actualizar datos
+		+sidebarLeft('directivo')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row 
+					.col-lg-12
+						
+						h4
+							small.text-success Obra: 
+							p
+							.fa.fa-angle-right.text-success
+							|  Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+
+				.row
+					- for(var i=0;i<25;i++)
+						.col-xs-12.col-sm-6.col-md-2
+							.panel.panel-primary
+								.panel-heading.text-center.text-center
+									a(href="_/img/avatar_file.png", title="file.jpg").imgbox: img(src="_/img/avatar_file.png", alt="", width="160", height="160").img-rounded.img-responsive
+								.panel-body
+									p file.jpg
+
+		+sharedScripts
+		

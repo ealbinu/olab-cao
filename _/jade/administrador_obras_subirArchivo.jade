@@ -1,0 +1,45 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Administrador")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Administrador')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-12
+						.lead Subir archivos en obra
+					
+		+sidebarLeft('administrador')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-lg-8.col-lg-push-2
+						
+						.panel.panel-primary
+							.panel-heading.posr
+								i.fa.fa-file-image-o  Seleccione una Obra
+								span.label.label-success.lt 1
+							.panel-body
+								form(action="#")
+									select(name="").form-control
+										option(value="", selected, disabled) Obras actuales
+										option(value="0") Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+							.panel-heading.posr
+								i.fa.fa-upload  Arrastre un archivo para cargarlo a la obra
+								span.label.label-success.lt 2
+							.panel-body
+								form.dropzone#administrador_subirArchivo(action="#")
+									.dz-message Arrastre o de click
+							.panel-footer: i.fa.fa-file  Archivos soportados: .pdf, .xls, .xlsx, .png, .jpg. jpeg
+		
+
+		+sharedScripts

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <title>CAO | Directivo</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="http://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="_/css/_style.css"/>
+  </head>
+</html>
+<body>
+  <div id="all" class="toggled-right">
+    <header class="mainHeader">
+      <div class="navbar navbar-default navbar-fixed-top bg-success">
+        <div class="container-fluid">
+          <div class="navbar-brand"><a href="index.html"><img src="_/img/logotipo_cao.png" alt="CAO" width="140"/></a></div>
+          <div class="nav navbar-left">
+            <button type="button" id="left-menu-toggle" class="btn btn-success"><i class="fa fa-bars"> <span class="hidden-xs"> Menu</span></i></button>
+          </div>
+          <form role="search" class="navbar-form navbar-left">
+            <div class="input-group">
+              <input type="text" placeholder="Buscar" class="form-control"/>
+              <div class="input-group-btn">
+                <button class="btn btn-primary">
+                  <div class="fa fa-search"></div>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="nav navbar-right">
+            <button type="button" id="right-menu-toggle" class="btn btn-success"><i class="fa fa-users"><span class="hidden-xs"> Contactos</span></i></button>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown notificaciones col-md-12"><a href="#" data-toggle="dropdown" role="button" id="my-task-list" class="dropdown-toggle">
+                <div class="label label-danger">9</div><span id="emailUsr" class="username"> Carlos Morales <small class="label">Directivo</small></span><img src="_/img/avatar.png" alt="Carlos Morales" width="22" class="img-circle"/>
+                <div class="caret"></div></a>
+              <ul role="menu" id="notification-list" class="dropdown-menu">
+                <li class="text-center bg-success text-success">Notificaciones</li>
+                <li class="divider"></li>
+                <li><a href="#" class="message-wrapper"><strong>Notificación 1</strong><br/><small>Texto de la primer notificación</small></a></li>
+                <li class="divider"></li>
+                <li><a href="#"><strong>Notificación 2</strong><br/><small>Texto de la segunda notificación</small></a></li>
+                <li class="divider"></li>
+                <li><a href="#"><strong>Notificación 3</strong><br/><small>Texto mucho más largo para la tercer notificación. Texto gigante. Grande. Largo y extenso.</small></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid bg-info subtitle text-info">
+        <div class="col-xs-4">
+          <div class="lead">Detalle del Proyecto</div>
+        </div>
+        <div class="col-xs-8 text-right">
+          <div class="row">
+            <form action="#" class="form-inline"></form>
+            <button class="btn btn-primary btn-xs">
+              <div class="fa fa-refresh"><span class="hidden-xs"> Actualizar datos</span></div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="bottomBar" class="navbar navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito1.png" alt="" width="140"/></div>
+          </div>
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito2.png" alt="" width="140"/></div>
+          </div>
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito3.png" alt="" width="140"/></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="sidebarLeft" class="scrollable panel-group">
+      <ul class="sidebar-nav">
+        <li><a href="#submenu0" data-toggle="collapse" data-parent="#sidebarLeft" class="collapsed"><i class="fa fa-desktop fa-lg"></i> Dashboard
+            <div class="caret"></div></a>
+          <ul id="submenu0" class="panel-collapse collapse">
+            <li><a href="directivo_dashboard_mapaDeProyectos.html">Mapa de Proyectos</a></li>
+            <li><a href="directivo_dashboard_detalleDelProyecto.html">Detalle del Proyecto</a></li>
+          </ul>
+        </li>
+        <li><a href="directivo_perfil.html" class="collapsed"><i class="fa fa-user fa-lg"></i> Perfil</a></li>
+        <li><a href="directivo_ayuda.html" class="collapsed"><i class="fa fa-info-circle fa-lg"></i> Ayuda</a></li>
+        <li><a href="directivo_acercaDe.html" class="collapsed"><i class="fa fa-question-circle fa-lg"></i> Acerca De</a></li>
+        <li class="text-center"><br/><a href="#" class="cerrarsesion">
+            <div class="fa fa-sign-out"></div> Cerrar sesión</a><br/></li>
+      </ul>
+    </div>
+    <div id="sidebarRight" class="scrollable">
+      <ul id="contactsList" class="sidebar-nav">
+        <li>
+          <form role="search">
+            <div class="input-group">
+              <input type="text" placeholder="Buscar contacto" id="searchTerm" class="form-control"/>
+              <div class="input-group-btn">
+                <button class="btn btn-primary">
+                  <div class="fa fa-search"></div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+      <table class="contactsListTable">
+        <tbody>
+          <tr>
+            <td><a href="#user0" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user0" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user1" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user1" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user2" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user2" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user3" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user3" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user4" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user4" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user5" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user5" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user6" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user6" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user7" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user7" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user8" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user8" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user9" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user9" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user10" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user10" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user11" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user11" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user12" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user12" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user13" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user13" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user14" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user14" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user15" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user15" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user16" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user16" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user17" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user17" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="page-content-wrapper">
+      <div class="content-fluid">
+        <div class="row">
+          <div class="col-xs-3">
+            <label for="sl_fisico">Desvío físico:  </label><span id="sl_fisico" class="label label-success">0%</span><br><br>
+            <div data-target="#sl_fisico" data-prefix="" data-postfix="%" data-min="0" data-max="50" class="slider-range-min"></div>
+          </div>
+          <div class="col-xs-3">
+            <label for="sl_financiero">Desvío financiero:  </label><span id="sl_financiero" class="label label-success">0%</span><br><br>
+            <div data-target="#sl_financiero" data-prefix="" data-postfix="%" data-min="0" data-max="50" class="slider-range-min"></div>
+          </div>
+          <div class="col-xs-3">
+            <button class="btn btn-success btn-xs">
+              <div class="fa fa-repeat"> Actualizar filtro</div>
+            </button>
+          </div>
+          <div class="col-xs-3">
+            <button class="btn btn-primary btn-xs">
+              <div class="fa fa-book"> Biblioteca</div>
+            </button>
+            <button class="btn btn-primary btn-xs">
+              <div class="fa fa-envelope-o"> Correo</div>
+            </button>
+          </div>
+        </div><br><br>
+        <div class="row">
+          <div class="col-xs-5">
+            <div class="panel panel-info">
+              <div class="panel-heading collapsed">
+                <div class="panel-title">
+                  <div class="fa fa-info-circle"> Datos del proyecto</div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <h3>Obras del Sistema Hidráulico en el Lago de Texcoco, en el Estado de México.</h3>
+                <h4>
+                  <div class="fa fa-caret-right"> Obras en el Lago de Texcoco,</div>
+                </h4>
+                <p>
+                  <div class="fa fa-angle-right"><strong> Dependencia: </strong>Comisión Nacional del Agua</div>
+                </p>
+                <p>
+                  <div class="fa fa-angle-right"><strong> Secretaría:  </strong>Secretaría de Medio Ambiente y Recursos Naturales</div>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-7">
+            <div data-toggle="collapse" id="accordion" class="panel-group">
+              <div class="panel panel-primary">
+                <div class="panel-heading collapsed text-right"><a href="#c1" data-toggle="collapse" data-parent="#accordion" class="db panel-title"><span>Avance físico  
+                      <div class="fa fa-line-chart"> </div></span></a></div>
+                <div id="c1" class="panel-collapse collapse panel-body">
+                  <p>Gráfica</p>
+                </div>
+              </div>
+              <div class="panel panel-primary">
+                <div class="panel-heading collapsed text-right"><a href="#c2" data-toggle="collapse" data-parent="#accordion" class="db panel-title"><span>Avance financiero  
+                      <div class="fa fa-line-chart"> </div></span></a></div>
+                <div id="c2" class="panel-collapse collapse panel-body">
+                  <p>Gráfica</p>
+                </div>
+              </div>
+              <div class="panel panel-primary">
+                <div class="panel-heading collapsed text-right"><a href="#c3" data-toggle="collapse" data-parent="#accordion" class="db panel-title"><span>Tendencia física  
+                      <div class="fa fa-line-chart"> </div></span></a></div>
+                <div id="c3" class="panel-collapse collapse panel-body">
+                  <p>Gráfica</p>
+                </div>
+              </div>
+              <div class="panel panel-primary">
+                <div class="panel-heading collapsed text-right"><a href="#c4" data-toggle="collapse" data-parent="#accordion" class="db panel-title"><span>Tendencia financiera  
+                      <div class="fa fa-line-chart"> </div></span></a></div>
+                <div id="c4" class="panel-collapse collapse panel-body">
+                  <p>Gráfica</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h3>Obras</h3>
+            <table data-tablesaw-mode="columntoggle" data-tablesaw-minimap data-tablesaw-sortable class="table-hover table-condensed">
+              <thead>
+                <tr class="bg-primary">
+                  <th data-tablesaw-priority="persist">Obra</th>
+                  <th data-tablesaw-priority="1">Avance Físico</th>
+                  <th data-tablesaw-priority="2">Avance Financiero</th>
+                  <th data-tablesaw-priority="3">Estatus Físico</th>
+                  <th data-tablesaw-priority="4">Estatus Financiero</th>
+                  <th data-tablesaw-priority="persist"> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> <strong><a href="#">Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona.</a></strong></td>
+                  <td>0.06%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td><a href="directivo_dashboard_detalleDeLaObra.html" class="btn btn-success btn-sm">
+                      <div class="fa fa-eye"> Ver</div></a></td>
+                </tr>
+                <tr>
+                  <td> <strong><a href="#">Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona.</a></strong></td>
+                  <td>0.06%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td><a href="directivo_dashboard_detalleDeLaObra.html" class="btn btn-success btn-sm">
+                      <div class="fa fa-eye"> Ver</div></a></td>
+                </tr>
+                <tr>
+                  <td> <strong><a href="#">Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona.</a></strong></td>
+                  <td>0.06%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td><a href="directivo_dashboard_detalleDeLaObra.html" class="btn btn-success btn-sm">
+                      <div class="fa fa-eye"> Ver</div></a></td>
+                </tr>
+                <tr>
+                  <td> <strong><a href="#">Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona.</a></strong></td>
+                  <td>0.06%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td><a href="directivo_dashboard_detalleDeLaObra.html" class="btn btn-success btn-sm">
+                      <div class="fa fa-eye"> Ver</div></a></td>
+                </tr>
+                <tr>
+                  <td> <strong><a href="#">Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona.</a></strong></td>
+                  <td>0.06%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td>0%</td>
+                  <td><a href="directivo_dashboard_detalleDeLaObra.html" class="btn btn-success btn-sm">
+                      <div class="fa fa-eye"> Ver</div></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="_/js/_/jquery.js"></script>
+    <script src="_/js/_/jquery-ui.js"></script>
+    <script src="_/js/_/bootstrap.min.js"></script>
+    <script src="_/js/_/dropzone.js"></script>
+    <script src="_/js/_/perfect-scrollbar.js"></script>
+    <script src="_/js/_/tablesaw.js"></script>
+    <script src="_/js/_/multi-select.js"></script>
+    <script src="_/js/_/quicksearch.js"></script>
+    <script src="_/js/_/swipebox.js"></script>
+    <script src="_/js/script.js"></script>
+  </div>
+</body>

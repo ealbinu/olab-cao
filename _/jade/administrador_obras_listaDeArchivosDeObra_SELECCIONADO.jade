@@ -1,0 +1,101 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Administrador")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Administrador')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-6
+						.lead Lista de archivos de obra
+					.col-xs-6
+						.row
+							form(action="#").form-inline
+								.col-xs-8
+									label(for="").fa.fa-file-image-o.hidden-xs.hidden-sm.hidden-md
+									select(name="", onchange="cambio()").form-control.input-sm#obraselect
+										option(value="", disabled) Seleccione una Obra
+										option(value="0", selected) Dragado de azolve
+								.col-xs-4
+									input(type="text", placeholder="Filtrar").form-control.input-sm
+		+sidebarLeft('administrador')
+		+sidebarRight
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-lg-12.text-right.text-warning.mb10
+						.fa.fa-download  Descargar archivo
+						|  | 
+						.fa.fa-trash-o  Eliminar
+				- for( var i=0; i<5; i++)
+					.row
+						.col-xs-12.col-sm-6.col-md-2
+							.panel.panel-primary
+								.panel-heading.text-center.withFileActions.text-center
+									img(src="_/img/avatar_video.png", alt="", width="160", height="160").img-rounded.img-responsive
+									.fileActions
+										button(data-toggle="tooltip", title="Descargar").btn.btn-primary.btn-sm.fa.fa-download
+										button(data-toggle="tooltip", title="Eliminar").btn.btn-danger.btn-sm.fa.fa-trash-o
+								.panel-body
+									p archivo-para biblioteca.ppt
+						.col-xs-12.col-sm-6.col-md-2
+							.panel.panel-primary
+								.panel-heading.text-center.withFileActions
+									img(src="_/img/avatar_file.png", alt="", width="160", height="160").img-rounded.img-responsive
+									.fileActions
+										button(data-toggle="tooltip", title="Descargar").btn.btn-primary.btn-sm.fa.fa-download
+										button(data-toggle="tooltip", title="Eliminar").btn.btn-danger.btn-sm.fa.fa-trash-o
+								.panel-body
+									p imagen-del-proyecto-334458592-para-envio.png
+						.col-xs-12.col-sm-6.col-md-2
+							.panel.panel-primary
+								.panel-heading.text-center.withFileActions
+									img(src="_/img/avatar_file.png", alt="", width="160", height="160").img-rounded.img-responsive
+									.fileActions
+										button(data-toggle="tooltip", title="Descargar").btn.btn-primary.btn-sm.fa.fa-download
+										button(data-toggle="tooltip", title="Eliminar").btn.btn-danger.btn-sm.fa.fa-trash-o
+								.panel-body
+									p imagen-jpg497-17193283jd-dndajauq-u11188881-para-cargar-en-plataforma-cao.jpg
+						.col-xs-12.col-sm-6.col-md-2
+							.panel.panel-primary
+								.panel-heading.text-center.withFileActions
+									img(src="_/img/avatar_file.png", alt="", width="160", height="160").img-rounded.img-responsive
+									.fileActions
+										button(data-toggle="tooltip", title="Descargar").btn.btn-primary.btn-sm.fa.fa-download
+										button(data-toggle="tooltip", title="Eliminar").btn.btn-danger.btn-sm.fa.fa-trash-o
+								.panel-body
+									p archivo-para biblioteca.ppt
+						.col-xs-12.col-sm-6.col-md-2
+							.panel.panel-primary
+								.panel-heading.text-center.withFileActions
+									img(src="_/img/avatar_video.png", alt="", width="160", height="160").img-rounded.img-responsive
+									.fileActions
+										button(data-toggle="tooltip", title="Descargar").btn.btn-primary.btn-sm.fa.fa-download
+										button(data-toggle="tooltip", title="Eliminar").btn.btn-danger.btn-sm.fa.fa-trash-o
+								.panel-body
+									p archivo-para biblioteca.ppt
+						.col-xs-12.col-sm-6.col-md-2
+							.panel.panel-primary
+								.panel-heading.text-center.withFileActions
+									img(src="_/img/avatar_file.png", alt="", width="160", height="160").img-rounded.img-responsive
+									.fileActions
+										button(data-toggle="tooltip", title="Descargar").btn.btn-primary.btn-sm.fa.fa-download
+										button(data-toggle="tooltip", title="Eliminar").btn.btn-danger.btn-sm.fa.fa-trash-o
+								.panel-body
+									p archivo-para biblioteca.ppt
+
+
+
+
+						
+						
+		
+
+		+sharedScripts

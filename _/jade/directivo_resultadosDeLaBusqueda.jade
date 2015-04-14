@@ -1,0 +1,39 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Directivo')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-12
+						.lead Resultados de la Búsqueda
+		+sidebarLeft('directivo')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-lg-10.col-lg-push-1
+						table.table-hover.table-condensed
+							thead
+								tr.bg-primary
+									th Nombre
+									th Límite Desvío
+							tbody
+								- for(var i=0;i<10;i++)
+									tr
+										td: a(href="#") DRAGADO DE AZOLVE Y RECTIFICACIÓN DE LA LAGUNA DE REGULACIÓN CHURUBUSCO, ZONA SECA, LADO SUR
+											p.small.text-primary Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur 
+										td 30
+
+
+
+		+sharedScripts

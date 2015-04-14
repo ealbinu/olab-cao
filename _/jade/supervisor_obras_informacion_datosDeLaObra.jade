@@ -1,0 +1,151 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Directivo')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Datos de la Obra
+					.col-xs-8
+					
+		+sidebarLeft('supervisor_obra')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row 
+					.col-lg-12
+						
+						h4
+							small.text-success Obra: 
+							p
+							.fa.fa-angle-right.text-success
+							|  Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+					.col-xs-4
+						.panel.panel-default
+							.panel-heading Ubicación
+							.panel-body
+								p: strong.text-success Entidad Federativa: 
+									span.text-primary Aguascalientes
+								p: strong.text-success Dirección: 
+									span.text-primary  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						.panel.panel-default
+							.panel-heading Contrato
+							.panel-body
+								p: strong.text-success Número de contrato: 
+									span.text-primary 1
+								p: strong.text-success Tipo de contrato: 
+									span.text-primary 1
+								p: strong.text-success Fecha de contrato: 
+									span.text-primary 26/02/2015
+								p: strong.text-success Fecha de inicio de contrato: 
+									span.text-primary 26/02/2015
+								p: strong.text-success Fecha de Termino de Contrato: 
+									span.text-primary 26/02/2015
+								p: strong.text-success Periodo de Ejecución en Días: 
+									span.text-primary 24
+								p: strong.text-success Importe de Contrato sin IVA: 
+									span.text-primary $28,590,681.02
+								p: strong.text-success Partida Presupuestal: 
+									span.text-primary $1.00
+								p: strong.text-success Importe Fiscal 1 sin IVA: 
+									span.text-primary $1.00
+								p: strong.text-success Nombre Ejercicio Fiscal 1: 
+									span.text-primary 1
+						.panel.panel-default
+							.panel-heading Contratista
+							.panel-body
+								p: strong.text-success Empresa Contratista: 
+									span.text-primary CONSTRUCCIONES Y DESARROLLO MACON, S.A. DE C.V.
+								p: strong.text-success Superintendente : 
+									span.text-primary 1.
+					.col-xs-4
+						.panel.panel-default
+							.panel-heading Dependencia
+							.panel-body
+								p: strong.text-success Gobierno: 
+									span.text-primary Gobierno de la República
+								p: strong.text-success Secretaría: 
+									span.text-primary Secretaría de Medio Ambiente y Recursos Naturales.
+								p: strong.text-success Dependencia: 
+									span.text-primary Comisión Nacional del Agua
+								p: strong.text-success Subdirección: 
+									span.text-primary 1
+								p: strong.text-success Área: 
+									span.text-primary 1
+						.panel.panel-default
+							.panel-heading Anticipo y Fianzas
+							.panel-body
+								p: strong.text-success Anticipo: 
+									span.text-primary 1
+								p: strong.text-success Fecha de Fianza Anticipo: 
+									span.text-primary 26/02/2015
+								p: strong.text-success Número de Fianza Anticipo: 
+									span.text-primary 2
+								p: strong.text-success Monto de Fianza Anticipo: 
+									span.text-primary $11.00
+								p: strong.text-success Número de Fianza Cumplimiento: 
+									span.text-primary 1
+								p: strong.text-success Número de Fianza Cumplimiento: 
+									span.text-primary 1
+								p: strong.text-success Fecha de Fianza Cumplimiento: 
+									span.text-primary 26/02/2015
+								p: strong.text-success Monto de Fianza Cumplimiento:
+									span.text-primary $1.00
+						.panel.panel-default
+							.panel-heading Desvío
+							.panel-body
+								p: strong.text-success Límite de desvío: 
+									span.text-primary 30
+								p: strong.text-success Desvío Actual: 
+									span.text-primary 1
+					.col-xs-4
+						.panel.panel-default
+							.panel-heading Convenios
+							.panel-body
+								p: strong.text-success Importe Convenio Reducción: 
+									span.text-primary $1.00
+								p: strong.text-success Importe Convenio Ampliación: 
+									span.text-primary $1.00
+								p: strong.text-success Importe Ajuste Costos: 
+									span.text-primary $1.00
+						.panel.panel-default
+							.panel-heading Revisores
+							.panel-body
+								p: strong.text-success Cargo Revisión 1: 
+									span.text-primary 1
+								p: strong.text-success Nombre Revisión 1: 
+									span.text-primary 1
+								p: strong.text-success Cargo Revisión 2: 
+									span.text-primary 2
+								p: strong.text-success Nombre Revisión 2: 
+									span.text-primary 1
+								p: strong.text-success Nombre de Quien Autoriza: 
+									span.text-primary Andrés
+								p: strong.text-success Nombre VoBo: 
+									span.text-primary 1
+								p: strong.text-success Cargo VoBo: 
+									span.text-primary 1
+									
+									
+				.row
+					.col-xs-12
+						.panel.panel-default
+							.panel-heading Ubicación de la Obra
+							.panel-body
+								.map.fullsize.halfHeight
+
+
+						
+
+		+sharedScripts
+		

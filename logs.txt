@@ -1,0 +1,8 @@
+#Fecha: 2015-04-13 | 0.1
+
+- Envío de documentacion a osalazar@adquem.com.
+- Sidebar de contactos cambiado a tablas para funcionamiento con filtro.
+- Añadida imagen avatar_video.png.
+- Cambio de ID's en selección de directivos (administrador_proyectos_altaDeProyectos) y se añadio onchange para la actualización de datos dinámicos según cao-pruebas.
+- Logotipos de gobierno en footer.
+- Se agregaron Id's y y reemplazaron previos ID's por class para evitar afecten el estilo

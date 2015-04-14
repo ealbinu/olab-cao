@@ -1,0 +1,93 @@
+mixin altaEmpresa(select)
+	.row
+		.col-lg-6
+			.form-group
+				label(for="ne_nombre") Nombre
+				input(type="text", placeholder="Nombre").form-control#ne_nombre
+		.col-lg-6
+			.form-group
+				label(for="ne_rfc") RFC
+				input(type="text", placeholder="Registro Federal de Contribuyentes").form-control#ne_rfc
+	.row
+		.col-lg-6
+			.form-group
+				label(for="ne_siglas") Siglas
+				input(type="text", placeholder="Siglas").form-control#ne_siglas
+		.col-lg-6
+			.form-group
+				label(for="ne_imss") IMSS
+				input(type="text", placeholder="Instituto Mexicano del Seguro Social").form-control#ne_imss
+	.row
+		.col-lg-12
+			.form-group
+				label(for="") Dirección
+				.row
+					.col-lg-4: input(type="text", placeholder="Calle").form-control#ne_calle
+					.col-lg-4: input(type="text", placeholder="Nº. Exterior").form-control#ne_next
+					.col-lg-4: input(type="text", placeholder="Nº. Interior").form-control#ne_nint
+	.row
+		.col-lg-6
+			.form-group
+				label(for="ne_colonia") Colonia
+				input(type="text", placeholder="Colonia").form-control#ne_colonia
+		.col-lg-6
+			.form-group
+				label(for="ne_del") Delegación o municipio
+				input(type="text", placeholder="Delegación o Municipio").form-control#ne_del
+	.row
+		.col-lg-6
+			.form-group
+				label(for="ne_colonia") Entidad
+				select(name="").form-control#ne_colonia
+					option(value="", selected, disabled) Seleccione la Entidad
+					option(value="") Distrito Federal
+					option(value="") Durango
+					option(value="") Coahuila
+		.col-lg-6
+			.form-group
+				label(for="ne_cp") Código Postal
+				input(type="text", placeholder="C.P.").form-control#ne_cp
+	.row
+		.col-lg-6
+			.form-group
+				label(for="ne_colonia") Tipo de Empresa
+				select(name="").form-control#ne_colonia
+					option(value="", selected=select=="", disabled) Seleccione el tipo
+					option(value="", selected=select=='Contratista') Contratista
+					option(value="", selected=select=='Dependencia') Dependencia
+					option(value="", selected=select=='Gobierno') Gobierno
+					option(value="", selected=select=='Particular') Particular
+					option(value="", selected=select=='Secretaría') Secretaría
+					option(value="", selected=select=='Supervisora') Supervisora
+		.col-lg-6
+			.form-group
+				label(for="ne_logo") Logotipo
+				input(type="file").form-control
+
+mixin altaUsuario(select)
+	.row
+		.col-lg-6
+			.form-group
+				label(for="ndir_tipo") Tipo de Usuario
+				select(name="").form-control
+					option(value="0", selected=select=="", disabled) Elegir tipo
+					option(value="1", selected=select=="Administrador") Administrador
+					option(value="2", selected=select=="Directivo") Directivo
+					option(value="3", selected=select=="Supervisor") Supervisor
+		.col-lg-6
+			.form-group
+				label(for="ndir_usuario") Nombre de usuario
+				input(type="text").form-control#ndir_usuario
+	.row
+		.col-lg-6
+			.form-group
+				label(for="ndir_personal") Personal
+				select(name="").form-control
+					option(value="0", selected, disabled) Seleccione una persona
+					option(value="1") Javier Martín Cosme
+					option(value="1") Fernando Garcés
+					option(value="1") Marco Antonio
+		.col-lg-6
+			.form-group
+				label(for="ndir_pass") Contraseña
+				input(type="password").form-control#ndir_pass

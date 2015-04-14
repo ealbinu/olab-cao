@@ -1,0 +1,271 @@
+mixin head(titleText)
+	meta(charset="utf-8")
+	title=titleText
+	meta(name="description" content="")
+	meta(name="viewport" content="width=device-width, initial-scale=1")
+	link(href='http://fonts.googleapis.com/css?family=Muli:300,400', rel='stylesheet', type='text/css')
+	link(rel="stylesheet", href="_/css/_style.css")
+	
+
+mixin header(role)
+	.navbar.navbar-default.navbar-fixed-top.bg-success
+		.container-fluid
+				.navbar-brand
+					a(href="index.html")
+						img(src="_/img/logotipo_cao.png", alt="CAO", width="140")
+				.nav.navbar-left
+					button(type="button").btn.btn-success#left-menu-toggle
+						i.fa.fa-bars  <span class="hidden-xs"> Menu</span>
+				form(role="search").navbar-form.navbar-left
+					.input-group
+						input(type="text", placeholder="Buscar").form-control
+						.input-group-btn
+							button.btn.btn-primary
+								.fa.fa-search
+				.nav.navbar-right
+					button(type="button").btn.btn-success#right-menu-toggle
+						i.fa.fa-users <span class="hidden-xs"> Contactos</span>
+				ul.nav.navbar-nav.navbar-right
+					li.dropdown.notificaciones.col-md-12
+						a(href="#").dropdown-toggle(data-toggle="dropdown", role="button")#my-task-list
+							.label.label-danger 9
+							span.username#emailUsr  Carlos Morales 
+								small.label=  role
+							img(src="_/img/avatar.png", alt="Carlos Morales", width="22").img-circle
+							.caret
+							
+						ul.dropdown-menu(role="menu")#notification-list
+								li.text-center.bg-success.text-success Notificaciones
+								li.divider
+								li
+									a(href="#").message-wrapper
+										strong Notificación 1
+										br
+										small Texto de la primer notificación
+								li.divider
+								li
+									a(href="#")
+										strong Notificación 2
+										br
+										small Texto de la segunda notificación
+								li.divider
+								li
+									a(href="#")
+										strong Notificación 3
+										br
+										small Texto mucho más largo para la tercer notificación. Texto gigante. Grande. Largo y extenso.
+	if block
+		block
+
+	.navbar.navbar-fixed-bottom#bottomBar
+		.container-fluid
+			.col-xs-4.text-center
+				.credito: img(src="_/img/credito1.png", alt="", width="140")
+			.col-xs-4.text-center
+				.credito:  img(src="_/img/credito2.png", alt="", width="140")
+			.col-xs-4.text-center
+				.credito:  img(src="_/img/credito3.png", alt="", width="140")
+ 
+
+mixin sidebarLeft(role)
+	#sidebarLeft.scrollable.panel-group
+		ul.sidebar-nav
+		
+			if (role=='administrador')
+				li
+					a(href="#submenu0", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-book.fa-lg
+						|  Biblioteca
+						.caret
+					ul#submenu0.panel-collapse.collapse
+						li: a(href="administrador_biblioteca_listaDeArchivos.html") Lista de archivos
+						li: a(href="administrador_biblioteca_subirArchivo.html") Subir archivo
+				li
+					a(href="#submenu1", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-folder.fa-lg
+						|  Proyectos
+						.caret
+					ul#submenu1.panel-collapse.collapse 
+						li: a(href="administrador_proyectos_listaDeProyectos.html") Lista de Proyectos
+						li: a(href="administrador_proyectos_altaDeProyectos.html") Alta de Proyectos
+						li: a(href="administrador_proyectos_listaDeArchivosDeProyecto.html") Lista de Archivos de Proyecto
+						li: a(href="administrador_proyectos_subirArchivo.html") Subir Archivo
+				li
+					a(href="#submenu2", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-building.fa-lg
+						|  Obras
+						.caret
+					ul#submenu2.panel-collapse.collapse 
+						li: a(href="administrador_obras_listaDeObras.html") Lista de Obras
+						li: a(href="administrador_obras_altaDeObras.html") Alta de Obras
+						li: a(href="administrador_obras_listaDeArchivosDeObra.html") Lista de Archivos de Obra
+						li: a(href="administrador_obras_subirArchivo.html") Subir Archivo
+						li: a(href="administrador_obras_generarReportes.html") Generar Reportes
+				li
+					a(href="#submenu3", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-list.fa-lg
+						|  Conceptos
+						.caret
+					ul#submenu3.panel-collapse.collapse 
+						li: a(href="administrador_conceptos_listaDeConceptos.html") Lista de Conceptos
+						li: a(href="administrador_conceptos_altaDeConceptos.html") Alta de Conceptos
+				li
+					a(href="#submenu4", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-th.fa-lg
+						|  Empresas
+						.caret
+					ul#submenu4.panel-collapse.collapse 
+						li: a(href="administrador_empresas_listaDeEmpresas.html") Lista de Empresas
+						li: a(href="administrador_empresas_altaDeEmpresas.html") Alta de Empresas
+				li
+					a(href="#submenu5", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-user.fa-lg
+						|  Usuarios
+						.caret
+					ul#submenu5.panel-collapse.collapse 
+						li: a(href="administrador_usuarios_listaDeUsuarios.html") Lista de Usuarios
+						li: a(href="administrador_usuarios_altaDeUsuarios.html") Alta de Usuarios
+				li
+					a(href="#submenu6", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-file.fa-lg
+						|  Catálogos
+						.caret
+					ul#submenu6.panel-collapse.collapse 
+						li: a(href="administrador_catalogos_listaDeMaquinariaYEquipo.html") Lista de Maquinario y Equipo
+						li: a(href="administrador_catalogos_altaDeMaquinariaYEquipo.html") Alta de Maquinario y Equipo
+						li: a(href="administrador_catalogos_listaDePersonas.html") Lista de Personas
+						li: a(href="administrador_catalogos_altaDePersona.html") Alta de Personas
+						li: a(href="administrador_catalogos_listaCategoriaDePersonal.html") Lista Categoria de Personal
+						li: a(href="administrador_catalogos_altaCategoriaDePersonal.html") Alta Categoria de Personal
+			if (role=='directivo')
+				li
+					a(href="#submenu0", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-desktop.fa-lg
+						|  Dashboard
+						.caret
+					ul#submenu0.panel-collapse.collapse
+						li: a(href="directivo_dashboard_mapaDeProyectos.html") Mapa de Proyectos
+						li: a(href="directivo_dashboard_detalleDelProyecto.html") Detalle del Proyecto
+				li
+					a(href="directivo_perfil.html").collapsed
+						i.fa.fa-user.fa-lg
+						|  Perfil
+				li
+					a(href="directivo_ayuda.html").collapsed
+						i.fa.fa-info-circle.fa-lg
+						|  Ayuda
+				li
+					a(href="directivo_acercaDe.html").collapsed
+						i.fa.fa-question-circle.fa-lg
+						|  Acerca De
+			if (role=='supervisor')
+				li
+					a(href="#submenu0", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-building.fa-lg
+						|  Obras
+						.caret
+					ul#submenu0.panel-collapse.collapse
+						li: a(href="supervisor_obras_listaDeObras.html") Lista de Obras
+						li: a(href="supervisor_obras_listaDeArchivosDeObra.html") Lista de Archivos de Obra
+						li: a(href="supervisor_obras_subirArchivos.html") Subir Archivos
+				li
+					a(href="supervisor_calendario.html").collapsed
+						i.fa.fa-calendar.fa-lg
+						|  Calendario
+			if (role=='supervisor_obra')
+				li
+					a(href="supervisor_obras_listaDeObras").collapsed
+						i.fa.fa-building.fa-lg
+						|  Lista de Obras 
+						i.fa.fa-chevron-left
+				li
+					a(href="#submenu0", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-info-circle.fa-lg
+						|  Información
+						.caret
+					ul#submenu0.panel-collapse.collapse
+						li: a(href="supervisor_obras_informacion_datosDeLaObra.html") Datos de la Obra
+						li: a(href="supervisor_obras_informacion_graficasDeLaObra.html") Gráficas de la Obra
+				li
+					a(href="#submenu1", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-newspaper-o.fa-lg
+						|  Reportes
+						.caret
+					ul#submenu1.panel-collapse.collapse
+						li: a(href="supervisor_obras_reportes_listaDeReportes.html") Lista de Reportes
+						li: a(href="supervisor_obras_reportes_altaDeReporte.html") Alta de Reporte
+						li: a(href="supervisor_obras_reportes_evidencias.html") Evidencias
+				li
+					a(href="#submenu2", data-toggle="collapse", data-parent="#sidebarLeft").collapsed
+						i.fa.fa-calendar-o.fa-lg
+						|  Estimación
+						.caret
+					ul#submenu2.panel-collapse.collapse
+						li: a(href="supervisor_obras_estimacion_listaDeEstimaciones.html") Lista de Estimaciones
+						li: a(href="supervisor_obras_estimacion_estimacion.html") Estimación
+				li
+					a(href="supervisor_calendario.html").collapsed
+						i.fa.fa-calendar.fa-lg
+						|  Calendario
+
+		
+
+
+			li.text-center
+				br
+				a(href="#").cerrarsesion
+					.fa.fa-sign-out
+					|  Cerrar sesión
+				br
+			
+			
+
+mixin sidebarRight
+	#sidebarRight.scrollable
+		ul.sidebar-nav#contactsList
+			li
+				form(role="search")
+					.input-group
+						input(type="text", placeholder="Buscar contacto").form-control#searchTerm
+						.input-group-btn
+							button.btn.btn-primary
+								.fa.fa-search
+		table.contactsListTable
+			tbody
+				- for(var i=0; i<18; i++)
+					tr
+						td
+							a(href="#user#{i}", data-toggle="collapse", data-parent="contactsList").collapsed
+								img(src="_/img/avatar.png", width="40", alt="").img-circle.pull-left
+								h5.text-right  José Antonio Mujica
+									.caret
+									br
+									small  Supervisor
+							div(id="user#{i}").panel-collapse.collapse.users
+								.col-xs-12
+									p.text-success.fa.fa-caret-right  Cargo:
+										strong.text-info  Administrador
+									p.text-success.fa.fa-phone  Teléfono:
+										strong.text-info  (55) 5768 - 5768
+									p.text-success.fa.fa-mobile  Radio:
+										strong.text-info  (55) 123 356
+									p.text-success.fa.fa-skype  Skype:
+										strong.text-info  admin4759
+									p.text-success.fa.fa-envelope-o  Correo:
+										a(href="mailto:admin4759@gmail.com").text-info.inline  admin4759@gmail.com
+									p.text-success.fa.fa-briefcase  RFC:
+										strong.text-info  MUJO890408RR4
+
+
+mixin scripts(scr)
+	- each sc in scr
+		script(src="_/js/#{sc}")
+mixin sharedScripts
+	+scripts(['_/jquery.js', '_/jquery-ui.js', '_/bootstrap.min.js', '_/dropzone.js', '_/perfect-scrollbar.js', '_/tablesaw.js', '_/multi-select.js', '_/quicksearch.js', '_/swipebox.js', 'script.js'])
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,66 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Directivo')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-12
+						.lead Perfil
+		+sidebarLeft('directivo')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-lg-8.col-lg-push-2
+						.panel.panel-primary
+							form
+								.panel-heading
+									.form-group
+										input(type="text", value="José Antonio Mujica", placeholder="Nombre").form-control#f0
+								.panel-body
+									.row
+										.col-lg-2.text-center
+											img(src="_/img/avatar.png", alt="", width="80", height="80").img-circle
+										.col-lg-5
+											.form-group
+												label(for="f1"): i.fa.fa-caret-right  Cargo:
+												select(name="").form-control
+													option(value="1", selected) Administrador
+													option(value="2") Directivo
+													option(value="3") Supervisor
+											.form-group
+												label(for="f2"): i.fa.fa-phone  Teléfono:
+												input(type="text", value="(55) 5768 - 5768").form-control#f2
+											.form-group
+												label(for="f3"): i.fa.fa-mobile  Radio:
+												input(type="text", value="(55) 123 356").form-control#f3
+
+										.col-lg-5
+												.form-group
+													label(for="f4"): i.fa.fa-skype  Skype:
+													input(type="text", value="admin4759").form-control#f4				
+												.form-group
+													label(for="f5"): i.fa.fa-envelope-o  Correo:
+													input(type="text", value="admin4759@gmail.com").form-control#f5
+												.form-group
+													label(for="f6"): i.fa.fa-briefcase  RFC:
+													input(type="text", value="MUJO890408RR4").form-control#f6
+								.panel-footer.text-right
+									button(type="submit").btn.btn-danger
+										.fa.fa-edit
+										|  Editar
+						img(src="_/img/banner1.png", alt="").col-xs-12
+
+
+
+		+sharedScripts

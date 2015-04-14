@@ -1,0 +1,87 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Administrador")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Administrador')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Lista de Obras
+					.col-xs-8.text-right
+						.row
+							form(action="#").form-inline
+								.form-group.col-xs-4
+									select(name="").form-control.input-sm#exampleTable_length
+										option(disabled selected) Mostrar datos
+										option(value="") 1
+										option(value="") 2
+										option(value="") 3
+								.form-group.col-xs-4#exampleTable_filter
+									input(type="text", placeholder="Filtrar").form-control.input-sm
+								.form-group.col-xs-4
+									button.btn.btn-primary.btn-xs
+										.fa.fa-times
+										|  Borrar
+		+sidebarLeft('administrador')
+		+sidebarRight
+		
+		
+		
+			
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-lg-12
+
+						table.table-hover.table-condensed(data-tablesaw-mode="columntoggle", data-tablesaw-minimap, data-tablesaw-sortable)#exampleTable
+							thead
+								tr.bg-primary
+									th(data-tablesaw-priority="persist")
+									th(data-tablesaw-priority="persist") Nombre
+									th(data-tablesaw-priority="1") Descripción
+									th(data-tablesaw-priority="2") Proyecto
+									th(data-tablesaw-priority="3") Dependencia
+									th(data-tablesaw-priority="4") Fecha Inicio
+									th(data-tablesaw-priority="5") Fecha Termino
+									th(data-tablesaw-priority="6") Importe sin IVA
+							tbody
+								- for(var i=0; i<10; i++)
+									tr
+										td
+											input(type="checkbox").form-control
+										td 
+											strong: a(href="#") Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+										td Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+										td Obras en el Lago de Texcoco
+										td Comisión Nacional del Agua
+										td 02/02/2015
+										td 26/02/2015
+										td $28,590,681.02
+				.row
+					.col-lg-6
+						nav
+							ul.pagination
+								li#exampleTable_info Mostrando <strong class="text-success">1 a 10</strong> de 41 valores
+					.col-lg-6
+						nav
+							ul.pagination#exampleTable_paginate
+								li.disabled
+									a(href="#")#exampleTable_previous
+										.fa.fa-chevron-left
+										|  Anterior
+								li.active
+									a(href="#") 1
+								- for(var i=2; i<10;i++)
+									li
+										a(href="#")=i
+								li
+									a(href="#")#exampleTable_next
+										| Siguiente 
+										.fa.fa-chevron-right
+
+		+sharedScripts

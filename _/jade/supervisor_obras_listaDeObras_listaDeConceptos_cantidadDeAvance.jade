@@ -1,0 +1,109 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Supervisor')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Cantidad de Avance
+					.col-xs-8.text-right
+						.row
+							form(action="#").form-inline
+								button.btn.btn-danger.btn-xs
+									.fa.fa-cloud
+									|  Guardar Avance
+		+sidebarLeft('supervisor_obra')
+		+sidebarRight
+		
+		
+		
+				
+				
+		#page-content-wrapper
+			.content-fluid
+
+				form(action="#")
+					.row
+						.col-lg-12
+							.form-group
+								label(for="f_0") Obra
+								input(type="text", value="Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur", disabled).form-control#f_0
+					.row
+						.col-lg-6
+							.form-group
+								label(for="f_1") Padre
+								input(type="text", value="CONSTRUCCIÓN DE CANAL A CIELO ABIERTO SE", disabled).form-control#f_1
+						.col-lg-6
+							.form-group
+								label(for="f_2") Clave del concepto
+								input(type="text", value="DPBCC-05", disabled).form-control#f_2
+					.row
+						.col-lg-6
+							.row
+								.col-sm-6
+									.form-group
+										label(for="f_3") Unidad de medida
+										input(type="text", value="M3-KM", disabled).form-control#f_3
+								.col-sm-6
+									.form-group
+										label(for="f_5") Cantidad Total
+										input(type="text", value="122843.26", disabled).form-control#f_5
+							.row
+								.col-sm-6
+									.form-group
+										label(for="f_6") Precio Unitario
+										input(type="text", value="$6.39", disabled).form-control#f_6
+								.col-sm-6
+									.form-group
+										label(for="f_7") Importe
+										input(type="text", value="$778,520.92", disabled).form-control#f_7
+							.row
+								.col-sm-6
+									.form-group
+										label(for="f_10") Fecha Inicio
+										input(type="text", value="04/08/2014", disabled).form-control#f_10
+
+								.col-sm-6
+									.form-group
+										label(for="f_11") Fecha Fín
+										input(type="text", value="15/11/2014", disabled).form-control#f_11
+						.col-lg-6
+							.form-group
+								label(for="f_4") Descripción del concepto
+								textarea(disabled, rows="11").form-control#f_4 | ACARREO A KILÓMETROS SUBSECUENTES  DEL MATERIAL PRODUCTO DE EXCAVACIONES, DEMOLICIONES, ETC. Y/O CUALQUIER TIPO DE ACARREO QUE SE REQUIERA EN OBRA, AL SITIO DE TIRO AUTORIZADO; A UNA DISTANCIA APROXIMADA NO MAS DE 20 KM, INCLUYE: EL PAGO DE REGALÍAS CORRESPONDIENTES POR USO DE SUELO Y TODOS LOS GASTOS NECESARIOS PARA SU CORRECTA DISPOSICION, DESCOPETE, TENDIDO Y BANDEADO DEL MATERIAL EN EL SITIO DE TIRO. (ESPECIFICACION 05)
+								
+					.row
+						.col-lg-6
+							.row
+									.col-sm-6
+										.form-group
+											label(for="f_8") Cantidad de Acumulada
+											input(type="text", value="600.0", disabled).form-control#f_8
+									.col-sm-6
+										.form-group
+											label(for="f_12")
+												.fa.fa-arrow-right.text-success
+												|  Cantidad de Avance
+											input(type="text", placeholder="Ingrese la cantidad").form-control#f_12
+						.col-lg-6
+							.row
+								.col-lg-12
+									label(for="") Ingrese los valores
+							.row
+								.col-sm-6
+									.input-group
+											span.input-group-addon: .fa.fa-plus.text-success
+											input(type="text", placeholder="Aditiva").form-control
+								.col-sm-6
+									.input-group
+											span.input-group-addon: .fa.fa-minus.text-danger
+											input(type="text", placeholder="Deductiva").form-control
+									
+							
+			
+		+sharedScripts
+		

@@ -1,0 +1,57 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Supervisor')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Subir archivos en obras
+					.col-xs-8.text-right
+						.row
+							form(action="#").form-inline
+								.form-group.col-xs-6
+									select(name="").form-control.input-sm
+										option(disabled selected) Mostrar datos
+										option(value="") 1
+										option(value="") 2
+										option(value="") 3
+								.form-group.col-xs-6
+									input(type="text", placeholder="Filtrar").form-control.input-sm
+							//button.btn.btn-primary.btn-xs
+								.fa.fa-refresh <span class="hidden-xs"> Actualizar datos</span>
+		+sidebarLeft('supervisor')
+		+sidebarRight
+		
+		
+		
+	
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row
+					.col-lg-8.col-lg-push-2
+						
+						.panel.panel-primary
+							.panel-heading: i.fa.fa-upload  Eliga una obra y después arrastre un archivo para cargarlo a la biblioteca de obras
+							.panel-body
+								form(action="").form-inline
+									.form-group
+									label(for="") Seleccione una obra: 
+									select(name="").form-control
+										option(value="", selected, disabled) Elegir
+										option(value="") Obra 1
+										option(value="") Obra 2
+										option(value="") Obra 3
+								br
+								form.dropzone#administrador_subirArchivo(action="#")
+									.dz-message Arrastre o de click
+							.panel-footer: i.fa.fa-file  Archivos soportados: .pdf, .xls, .xlsx, .png, .jpg. jpeg
+
+		
+		+sharedScripts
+		
