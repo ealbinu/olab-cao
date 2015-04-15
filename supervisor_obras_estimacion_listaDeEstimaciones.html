@@ -33,7 +33,7 @@
           </div>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown notificaciones col-md-12"><a href="#" data-toggle="dropdown" role="button" id="my-task-list" class="dropdown-toggle">
-                <div class="label label-danger">9</div><span id="emailUsr" class="username"> Carlos Morales <small class="label">Directivo</small></span><img src="_/img/avatar.png" alt="Carlos Morales" width="22" class="img-circle"/>
+                <div class="label label-danger">9</div><span id="emailUsr" class="username"> Carlos Morales <small class="label">Supervisor</small></span><img src="_/img/avatar.png" alt="Carlos Morales" width="22" class="img-circle"/>
                 <div class="caret"></div></a>
               <ul role="menu" id="notification-list" class="dropdown-menu">
                 <li class="text-center bg-success text-success">Notificaciones</li>
@@ -50,9 +50,27 @@
       </div>
       <div class="container-fluid bg-info subtitle text-info">
         <div class="col-xs-4">
-          <div class="lead">Datos de la Obra</div>
+          <div class="lead">Lista de Estimaciones</div>
         </div>
-        <div class="col-xs-8"></div>
+        <div class="col-xs-8 text-right">
+          <div class="row">
+            <form action="#" class="form-inline">
+              <div class="form-group col-xs-6">
+                <select name="" class="form-control input-sm">
+                  <option disabled selected>Mostrar datos</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+              </div>
+              <div class="form-group col-xs-6">
+                <input type="text" placeholder="Filtrar" class="form-control input-sm">
+              </div>
+            </form>
+            <!--button.btn.btn-primary.btn-xs.fa.fa-refresh <span class="hidden-xs"> Actualizar datos</span>
+            -->
+          </div>
+        </div>
       </div>
       <div id="bottomBar" class="navbar navbar-fixed-bottom">
         <div class="container-fluid">
@@ -433,100 +451,73 @@
               <div class="fa fa-angle-right text-success"></div> Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
             </h4>
           </div>
-          <div class="col-xs-4">
-            <div class="panel panel-default">
-              <div class="panel-heading">Ubicación</div>
-              <div class="panel-body">
-                <p><strong class="text-success">Entidad Federativa: <span class="text-primary">Aguascalientes</span></strong></p>
-                <p><strong class="text-success">Dirección: <span class="text-primary"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></strong></p>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">Contrato</div>
-              <div class="panel-body">
-                <p><strong class="text-success">Número de contrato: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Tipo de contrato: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Fecha de contrato: <span class="text-primary">26/02/2015</span></strong></p>
-                <p><strong class="text-success">Fecha de inicio de contrato: <span class="text-primary">26/02/2015</span></strong></p>
-                <p><strong class="text-success">Fecha de Termino de Contrato: <span class="text-primary">26/02/2015</span></strong></p>
-                <p><strong class="text-success">Periodo de Ejecución en Días: <span class="text-primary">24</span></strong></p>
-                <p><strong class="text-success">Importe de Contrato sin IVA: <span class="text-primary">$28,590,681.02</span></strong></p>
-                <p><strong class="text-success">Partida Presupuestal: <span class="text-primary">$1.00</span></strong></p>
-                <p><strong class="text-success">Importe Fiscal 1 sin IVA: <span class="text-primary">$1.00</span></strong></p>
-                <p><strong class="text-success">Nombre Ejercicio Fiscal 1: <span class="text-primary">1</span></strong></p>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">Contratista</div>
-              <div class="panel-body">
-                <p><strong class="text-success">Empresa Contratista: <span class="text-primary">CONSTRUCCIONES Y DESARROLLO MACON, S.A. DE C.V.</span></strong></p>
-                <p><strong class="text-success">Superintendente : <span class="text-primary">1.</span></strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="panel panel-default">
-              <div class="panel-heading">Dependencia</div>
-              <div class="panel-body">
-                <p><strong class="text-success">Gobierno: <span class="text-primary">Gobierno de la República</span></strong></p>
-                <p><strong class="text-success">Secretaría: <span class="text-primary">Secretaría de Medio Ambiente y Recursos Naturales.</span></strong></p>
-                <p><strong class="text-success">Dependencia: <span class="text-primary">Comisión Nacional del Agua</span></strong></p>
-                <p><strong class="text-success">Subdirección: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Área: <span class="text-primary">1</span></strong></p>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">Anticipo y Fianzas</div>
-              <div class="panel-body">
-                <p><strong class="text-success">Anticipo: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Fecha de Fianza Anticipo: <span class="text-primary">26/02/2015</span></strong></p>
-                <p><strong class="text-success">Número de Fianza Anticipo: <span class="text-primary">2</span></strong></p>
-                <p><strong class="text-success">Monto de Fianza Anticipo: <span class="text-primary">$11.00</span></strong></p>
-                <p><strong class="text-success">Número de Fianza Cumplimiento: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Número de Fianza Cumplimiento: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Fecha de Fianza Cumplimiento: <span class="text-primary">26/02/2015</span></strong></p>
-                <p><strong class="text-success">Monto de Fianza Cumplimiento:<span class="text-primary">$1.00</span></strong></p>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">Desvío</div>
-              <div class="panel-body">
-                <p><strong class="text-success">Límite de desvío: <span class="text-primary">30</span></strong></p>
-                <p><strong class="text-success">Desvío Actual: <span class="text-primary">1</span></strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="panel panel-default">
-              <div class="panel-heading">Convenios</div>
-              <div class="panel-body">
-                <p><strong class="text-success">Importe Convenio Reducción: <span class="text-primary">$1.00</span></strong></p>
-                <p><strong class="text-success">Importe Convenio Ampliación: <span class="text-primary">$1.00</span></strong></p>
-                <p><strong class="text-success">Importe Ajuste Costos: <span class="text-primary">$1.00</span></strong></p>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">Revisores</div>
-              <div class="panel-body">
-                <p><strong class="text-success">Cargo Revisión 1: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Nombre Revisión 1: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Cargo Revisión 2: <span class="text-primary">2</span></strong></p>
-                <p><strong class="text-success">Nombre Revisión 2: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Nombre de Quien Autoriza: <span class="text-primary">Andrés</span></strong></p>
-                <p><strong class="text-success">Nombre VoBo: <span class="text-primary">1</span></strong></p>
-                <p><strong class="text-success">Cargo VoBo: <span class="text-primary">1</span></strong></p>
-              </div>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <table data-tablesaw-mode="columntoggle" data-tablesaw-minimap data-tablesaw-sortable class="table-hover table-condensed">
+              <thead>
+                <tr class="bg-primary">
+                  <th data-tablesaw-priority="persist">Número de Estimación</th>
+                  <th data-tablesaw-priority="1">Fecha de Inicio</th>
+                  <th data-tablesaw-priority="1">Fecha de Término</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> <strong><a href="#">Estimación 1</a></strong></td>
+                  <td>25/04/2015</td>
+                  <td>25/05/2015</td>
+                </tr>
+                <tr>
+                  <td> <strong><a href="#">Estimación 1</a></strong></td>
+                  <td>25/04/2015</td>
+                  <td>25/05/2015</td>
+                </tr>
+                <tr>
+                  <td> <strong><a href="#">Estimación 1</a></strong></td>
+                  <td>25/04/2015</td>
+                  <td>25/05/2015</td>
+                </tr>
+                <tr>
+                  <td> <strong><a href="#">Estimación 1</a></strong></td>
+                  <td>25/04/2015</td>
+                  <td>25/05/2015</td>
+                </tr>
+                <tr>
+                  <td> <strong><a href="#">Estimación 1</a></strong></td>
+                  <td>25/04/2015</td>
+                  <td>25/05/2015</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12">
-            <div class="panel panel-default">
-              <div class="panel-heading">Ubicación de la Obra</div>
-              <div class="panel-body">
-                <div class="map fullsize halfHeight"></div>
-              </div>
-            </div>
+          <div class="col-lg-6">
+            <nav>
+              <ul class="pagination">
+                <li>Mostrando <strong class="text-success">1 a 10</strong> de 41 valores</li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-6">
+            <nav>
+              <ul class="pagination">
+                <li class="disabled"><a href="#">
+                    <div class="fa fa-chevron-left"></div> Anterior</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">Siguiente 
+                    <div class="fa fa-chevron-right"></div></a></li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

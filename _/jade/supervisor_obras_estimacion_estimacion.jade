@@ -1,0 +1,79 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Supervisor')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-6
+						.lead Estimación
+					.col-xs-6.text-right
+						.row
+							form(action="#").form-inline
+								button.btn.btn-danger.btn-xs
+									.fa.fa-cloud  Guardar
+		+sidebarLeft('supervisor_obra')
+		+sidebarRight
+		
+		
+		
+				
+				
+		#page-content-wrapper
+			.content-fluid
+			
+				
+			
+				.row 
+					.col-lg-12
+						
+						h4
+							small.text-success Obra: 
+							p
+							.fa.fa-angle-right.text-success
+							|  Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+
+				form(action="#")
+					.row
+						.col-sm-6
+						
+							.form-group
+								label(for="num_estimacion") Número de estimación
+								input(type="text")#num_estimacion.form-control
+						.col-sm-6
+							.row
+								.col-sm-6
+									.form-group
+										label(for="fecha_inicio") Fecha de Inicio
+										input(type="text")#fecha_inicio.form-control.datepicker
+								.col-sm-6
+									.form-group
+										label(for="fecha_termino") Fecha de Término
+										input(type="text")#fecha_termino.form-control.datepicker
+						
+					.row
+						.col-sm-12
+							.panel.panel-default
+								.panel-heading Lista de conceptos
+								.panel-body.scrollable.limitHeight
+									table.table-condensed(data-tablesaw-mode="columntoggle", data-tablesaw-minimap, data-tablesaw-sortable)
+										thead
+											tr.bg-primary
+												th(data-tablesaw-priority="persist") 
+												th(data-tablesaw-priority="persist") Concepto
+												th(data-tablesaw-priority="1") Descripción
+										tbody
+											- for(var i=0; i<80; i++)
+												tr
+													td: input(type="checkbox", id="check#{i}").onCheckRow
+													td: label(for="check#{i}"): strong Concepto #{i}
+													td: label(for="check#{i}") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.
+
+
+
+		
+		+sharedScripts
+		

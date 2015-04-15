@@ -6,3 +6,7 @@
 - Cambio de ID's en selección de directivos (administrador_proyectos_altaDeProyectos) y se añadio onchange para la actualización de datos dinámicos según cao-pruebas.
 - Logotipos de gobierno en footer.
 - Se agregaron Id's y y reemplazaron previos ID's por class para evitar afecten el estilo
+
+# Fecha 2015-04-15 | 0.1
+
+- Se agregó !important en el css del fondo de la barra inferior (logotipos de empresas) para evitar que tome el estilo de la barra superior

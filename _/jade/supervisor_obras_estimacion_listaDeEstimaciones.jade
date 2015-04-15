@@ -1,0 +1,84 @@
+include _mixins.jade
+doctype html
+html(lang="es")
+	head
+		+head("CAO | Directivo")
+body
+	#all.toggled-right
+		header.mainHeader
+			+header('Supervisor')
+				.container-fluid.bg-info.subtitle.text-info
+					.col-xs-4
+						.lead Lista de Estimaciones
+					.col-xs-8.text-right
+						.row
+							form(action="#").form-inline
+								.form-group.col-xs-6
+									select(name="").form-control.input-sm
+										option(disabled selected) Mostrar datos
+										option(value="") 1
+										option(value="") 2
+										option(value="") 3
+								.form-group.col-xs-6
+									input(type="text", placeholder="Filtrar").form-control.input-sm
+							//button.btn.btn-primary.btn-xs
+								.fa.fa-refresh <span class="hidden-xs"> Actualizar datos</span>
+		+sidebarLeft('supervisor_obra')
+		+sidebarRight
+		
+		
+		
+				
+				
+		#page-content-wrapper
+			.content-fluid
+				.row 
+					.col-lg-12
+						
+						h4
+							small.text-success Obra: 
+							p
+							.fa.fa-angle-right.text-success
+							|  Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+
+				.row
+					.col-lg-12
+					
+						table.table-hover.table-condensed(data-tablesaw-mode="columntoggle", data-tablesaw-minimap, data-tablesaw-sortable)
+							thead
+								tr.bg-primary
+									th(data-tablesaw-priority="persist") Número de Estimación
+									th(data-tablesaw-priority="1") Fecha de Inicio
+									th(data-tablesaw-priority="1") Fecha de Término
+							tbody
+								- for(var i=0; i<5; i++)
+									tr
+										td 
+											strong: a(href="#") Estimación 1
+										td 25/04/2015
+										td 25/05/2015
+				.row
+					.col-lg-6
+						nav
+							ul.pagination
+								li Mostrando <strong class="text-success">1 a 10</strong> de 41 valores
+					.col-lg-6
+						nav
+							ul.pagination
+								li.disabled
+									a(href="#")
+										.fa.fa-chevron-left
+										|  Anterior
+								li.active
+									a(href="#") 1
+								- for(var i=2; i<10;i++)
+									li
+										a(href="#")=i
+								li
+									a(href="#")
+										| Siguiente 
+										.fa.fa-chevron-right
+
+		
+		+sharedScripts
+		

@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <title>CAO | Directivo</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="http://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="_/css/_style.css"/>
+  </head>
+</html>
+<body>
+  <div id="all" class="toggled-right">
+    <header class="mainHeader">
+      <div class="navbar navbar-default navbar-fixed-top bg-success">
+        <div class="container-fluid">
+          <div class="navbar-brand"><a href="index.html"><img src="_/img/logotipo_cao.png" alt="CAO" width="140"/></a></div>
+          <div class="nav navbar-left">
+            <button type="button" id="left-menu-toggle" class="btn btn-success"><i class="fa fa-bars"> <span class="hidden-xs"> Menu</span></i></button>
+          </div>
+          <form role="search" class="navbar-form navbar-left">
+            <div class="input-group">
+              <input type="text" placeholder="Buscar" class="form-control"/>
+              <div class="input-group-btn">
+                <button class="btn btn-primary">
+                  <div class="fa fa-search"></div>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="nav navbar-right">
+            <button type="button" id="right-menu-toggle" class="btn btn-success"><i class="fa fa-users"><span class="hidden-xs"> Contactos</span></i></button>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown notificaciones col-md-12"><a href="#" data-toggle="dropdown" role="button" id="my-task-list" class="dropdown-toggle">
+                <div class="label label-danger">9</div><span id="emailUsr" class="username"> Carlos Morales <small class="label">Supervisor</small></span><img src="_/img/avatar.png" alt="Carlos Morales" width="22" class="img-circle"/>
+                <div class="caret"></div></a>
+              <ul role="menu" id="notification-list" class="dropdown-menu">
+                <li class="text-center bg-success text-success">Notificaciones</li>
+                <li class="divider"></li>
+                <li><a href="#" class="message-wrapper"><strong>Notificación 1</strong><br/><small>Texto de la primer notificación</small></a></li>
+                <li class="divider"></li>
+                <li><a href="#"><strong>Notificación 2</strong><br/><small>Texto de la segunda notificación</small></a></li>
+                <li class="divider"></li>
+                <li><a href="#"><strong>Notificación 3</strong><br/><small>Texto mucho más largo para la tercer notificación. Texto gigante. Grande. Largo y extenso.</small></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid bg-info subtitle text-info">
+        <div class="col-xs-6">
+          <div class="lead">Estimación</div>
+        </div>
+        <div class="col-xs-6 text-right">
+          <div class="row">
+            <form action="#" class="form-inline">
+              <button class="btn btn-danger btn-xs">
+                <div class="fa fa-cloud"> Guardar</div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="bottomBar" class="navbar navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito1.png" alt="" width="140"/></div>
+          </div>
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito2.png" alt="" width="140"/></div>
+          </div>
+          <div class="col-xs-4 text-center">
+            <div class="credito"><img src="_/img/credito3.png" alt="" width="140"/></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="sidebarLeft" class="scrollable panel-group">
+      <ul class="sidebar-nav">
+        <li><a href="supervisor_obras_listaDeObras.html" class="collapsed"><i class="fa fa-building fa-lg"></i> Lista de Obras <i class="fa fa-chevron-left"></i></a></li>
+        <li><a href="#submenu0" data-toggle="collapse" data-parent="#sidebarLeft" class="collapsed"><i class="fa fa-info-circle fa-lg"></i> Información
+            <div class="caret"></div></a>
+          <ul id="submenu0" class="panel-collapse collapse">
+            <li><a href="supervisor_obras_informacion_datosDeLaObra.html">Datos de la Obra</a></li>
+            <li><a href="supervisor_obras_informacion_graficasDeLaObra.html">Gráficas de la Obra</a></li>
+          </ul>
+        </li>
+        <li><a href="#submenu1" data-toggle="collapse" data-parent="#sidebarLeft" class="collapsed"><i class="fa fa-newspaper-o fa-lg"></i> Reportes
+            <div class="caret"></div></a>
+          <ul id="submenu1" class="panel-collapse collapse">
+            <li><a href="supervisor_obras_reportes_listaDeReportes.html">Lista de Reportes</a></li>
+            <li><a href="supervisor_obras_reportes_altaDeReporte.html">Alta de Reporte</a></li>
+            <li><a href="supervisor_obras_reportes_evidencias.html">Evidencias</a></li>
+          </ul>
+        </li>
+        <li><a href="#submenu2" data-toggle="collapse" data-parent="#sidebarLeft" class="collapsed"><i class="fa fa-calendar-o fa-lg"></i> Estimación
+            <div class="caret"></div></a>
+          <ul id="submenu2" class="panel-collapse collapse">
+            <li><a href="supervisor_obras_estimacion_listaDeEstimaciones.html">Lista de Estimaciones</a></li>
+            <li><a href="supervisor_obras_estimacion_estimacion.html">Estimación</a></li>
+          </ul>
+        </li>
+        <li><a href="supervisor_calendario.html" class="collapsed"><i class="fa fa-calendar fa-lg"></i> Calendario</a></li>
+        <li class="text-center"><br/><a href="#" class="cerrarsesion">
+            <div class="fa fa-sign-out"></div> Cerrar sesión</a><br/></li>
+      </ul>
+    </div>
+    <div id="sidebarRight" class="scrollable">
+      <ul id="contactsList" class="sidebar-nav">
+        <li>
+          <form role="search">
+            <div class="input-group">
+              <input type="text" placeholder="Buscar contacto" id="searchTerm" class="form-control"/>
+              <div class="input-group-btn">
+                <button class="btn btn-primary">
+                  <div class="fa fa-search"></div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+      <table class="contactsListTable">
+        <tbody>
+          <tr>
+            <td><a href="#user0" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user0" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user1" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user1" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user2" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user2" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user3" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user3" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user4" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user4" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user5" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user5" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user6" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user6" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user7" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user7" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user8" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user8" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user9" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user9" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user10" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user10" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user11" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user11" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user12" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user12" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user13" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user13" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user14" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user14" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user15" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user15" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user16" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user16" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#user17" data-toggle="collapse" data-parent="contactsList" class="collapsed"><img src="_/img/avatar.png" width="40" alt="" class="img-circle pull-left"/>
+                <h5 class="text-right"> José Antonio Mujica
+                  <div class="caret"></div><br/><small> Supervisor</small>
+                </h5></a>
+              <div id="user17" class="panel-collapse collapse users">
+                <div class="col-xs-12">
+                  <p class="text-success fa fa-caret-right"> Cargo:<strong class="text-info"> Administrador</strong></p>
+                  <p class="text-success fa fa-phone"> Teléfono:<strong class="text-info"> (55) 5768 - 5768</strong></p>
+                  <p class="text-success fa fa-mobile"> Radio:<strong class="text-info"> (55) 123 356</strong></p>
+                  <p class="text-success fa fa-skype"> Skype:<strong class="text-info"> admin4759</strong></p>
+                  <p class="text-success fa fa-envelope-o"> Correo:<a href="mailto:admin4759@gmail.com" class="text-info inline"> admin4759@gmail.com</a></p>
+                  <p class="text-success fa fa-briefcase"> RFC:<strong class="text-info"> MUJO890408RR4</strong></p>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="page-content-wrapper">
+      <div class="content-fluid">
+        <div class="row"> 
+          <div class="col-lg-12">
+            <h4><small class="text-success">Obra: </small>
+              <p></p>
+              <div class="fa fa-angle-right text-success"></div> Dragado de azolve y rectificación de la Laguna de Regulación Churubusco, zona seca, lado sur.
+            </h4>
+          </div>
+        </div>
+        <form action="#">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="num_estimacion">Número de estimación</label>
+                <input type="text" id="num_estimacion" class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="fecha_inicio">Fecha de Inicio</label>
+                    <input type="text" id="fecha_inicio" class="form-control datepicker">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="fecha_termino">Fecha de Término</label>
+                    <input type="text" id="fecha_termino" class="form-control datepicker">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">Lista de conceptos</div>
+                <div class="panel-body scrollable limitHeight">
+                  <table data-tablesaw-mode="columntoggle" data-tablesaw-minimap data-tablesaw-sortable class="table-condensed">
+                    <thead>
+                      <tr class="bg-primary">
+                        <th data-tablesaw-priority="persist"> </th>
+                        <th data-tablesaw-priority="persist">Concepto</th>
+                        <th data-tablesaw-priority="1">Descripción</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check0" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check0"><strong>Concepto 0</strong></label>
+                        </td>
+                        <td>
+                          <label for="check0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check1" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check1"><strong>Concepto 1</strong></label>
+                        </td>
+                        <td>
+                          <label for="check1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check2" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check2"><strong>Concepto 2</strong></label>
+                        </td>
+                        <td>
+                          <label for="check2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check3" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check3"><strong>Concepto 3</strong></label>
+                        </td>
+                        <td>
+                          <label for="check3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check4" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check4"><strong>Concepto 4</strong></label>
+                        </td>
+                        <td>
+                          <label for="check4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check5" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check5"><strong>Concepto 5</strong></label>
+                        </td>
+                        <td>
+                          <label for="check5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check6" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check6"><strong>Concepto 6</strong></label>
+                        </td>
+                        <td>
+                          <label for="check6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check7" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check7"><strong>Concepto 7</strong></label>
+                        </td>
+                        <td>
+                          <label for="check7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check8" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check8"><strong>Concepto 8</strong></label>
+                        </td>
+                        <td>
+                          <label for="check8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check9" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check9"><strong>Concepto 9</strong></label>
+                        </td>
+                        <td>
+                          <label for="check9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check10" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check10"><strong>Concepto 10</strong></label>
+                        </td>
+                        <td>
+                          <label for="check10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check11" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check11"><strong>Concepto 11</strong></label>
+                        </td>
+                        <td>
+                          <label for="check11">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check12" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check12"><strong>Concepto 12</strong></label>
+                        </td>
+                        <td>
+                          <label for="check12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check13" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check13"><strong>Concepto 13</strong></label>
+                        </td>
+                        <td>
+                          <label for="check13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check14" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check14"><strong>Concepto 14</strong></label>
+                        </td>
+                        <td>
+                          <label for="check14">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check15" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check15"><strong>Concepto 15</strong></label>
+                        </td>
+                        <td>
+                          <label for="check15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check16" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check16"><strong>Concepto 16</strong></label>
+                        </td>
+                        <td>
+                          <label for="check16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check17" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check17"><strong>Concepto 17</strong></label>
+                        </td>
+                        <td>
+                          <label for="check17">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check18" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check18"><strong>Concepto 18</strong></label>
+                        </td>
+                        <td>
+                          <label for="check18">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check19" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check19"><strong>Concepto 19</strong></label>
+                        </td>
+                        <td>
+                          <label for="check19">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check20" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check20"><strong>Concepto 20</strong></label>
+                        </td>
+                        <td>
+                          <label for="check20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check21" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check21"><strong>Concepto 21</strong></label>
+                        </td>
+                        <td>
+                          <label for="check21">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check22" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check22"><strong>Concepto 22</strong></label>
+                        </td>
+                        <td>
+                          <label for="check22">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check23" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check23"><strong>Concepto 23</strong></label>
+                        </td>
+                        <td>
+                          <label for="check23">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check24" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check24"><strong>Concepto 24</strong></label>
+                        </td>
+                        <td>
+                          <label for="check24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check25" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check25"><strong>Concepto 25</strong></label>
+                        </td>
+                        <td>
+                          <label for="check25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check26" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check26"><strong>Concepto 26</strong></label>
+                        </td>
+                        <td>
+                          <label for="check26">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check27" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check27"><strong>Concepto 27</strong></label>
+                        </td>
+                        <td>
+                          <label for="check27">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check28" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check28"><strong>Concepto 28</strong></label>
+                        </td>
+                        <td>
+                          <label for="check28">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check29" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check29"><strong>Concepto 29</strong></label>
+                        </td>
+                        <td>
+                          <label for="check29">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check30" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check30"><strong>Concepto 30</strong></label>
+                        </td>
+                        <td>
+                          <label for="check30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check31" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check31"><strong>Concepto 31</strong></label>
+                        </td>
+                        <td>
+                          <label for="check31">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check32" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check32"><strong>Concepto 32</strong></label>
+                        </td>
+                        <td>
+                          <label for="check32">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check33" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check33"><strong>Concepto 33</strong></label>
+                        </td>
+                        <td>
+                          <label for="check33">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check34" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check34"><strong>Concepto 34</strong></label>
+                        </td>
+                        <td>
+                          <label for="check34">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check35" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check35"><strong>Concepto 35</strong></label>
+                        </td>
+                        <td>
+                          <label for="check35">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check36" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check36"><strong>Concepto 36</strong></label>
+                        </td>
+                        <td>
+                          <label for="check36">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check37" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check37"><strong>Concepto 37</strong></label>
+                        </td>
+                        <td>
+                          <label for="check37">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check38" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check38"><strong>Concepto 38</strong></label>
+                        </td>
+                        <td>
+                          <label for="check38">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check39" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check39"><strong>Concepto 39</strong></label>
+                        </td>
+                        <td>
+                          <label for="check39">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check40" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check40"><strong>Concepto 40</strong></label>
+                        </td>
+                        <td>
+                          <label for="check40">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check41" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check41"><strong>Concepto 41</strong></label>
+                        </td>
+                        <td>
+                          <label for="check41">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check42" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check42"><strong>Concepto 42</strong></label>
+                        </td>
+                        <td>
+                          <label for="check42">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check43" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check43"><strong>Concepto 43</strong></label>
+                        </td>
+                        <td>
+                          <label for="check43">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check44" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check44"><strong>Concepto 44</strong></label>
+                        </td>
+                        <td>
+                          <label for="check44">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check45" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check45"><strong>Concepto 45</strong></label>
+                        </td>
+                        <td>
+                          <label for="check45">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check46" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check46"><strong>Concepto 46</strong></label>
+                        </td>
+                        <td>
+                          <label for="check46">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check47" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check47"><strong>Concepto 47</strong></label>
+                        </td>
+                        <td>
+                          <label for="check47">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check48" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check48"><strong>Concepto 48</strong></label>
+                        </td>
+                        <td>
+                          <label for="check48">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check49" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check49"><strong>Concepto 49</strong></label>
+                        </td>
+                        <td>
+                          <label for="check49">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check50" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check50"><strong>Concepto 50</strong></label>
+                        </td>
+                        <td>
+                          <label for="check50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check51" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check51"><strong>Concepto 51</strong></label>
+                        </td>
+                        <td>
+                          <label for="check51">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check52" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check52"><strong>Concepto 52</strong></label>
+                        </td>
+                        <td>
+                          <label for="check52">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check53" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check53"><strong>Concepto 53</strong></label>
+                        </td>
+                        <td>
+                          <label for="check53">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check54" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check54"><strong>Concepto 54</strong></label>
+                        </td>
+                        <td>
+                          <label for="check54">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check55" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check55"><strong>Concepto 55</strong></label>
+                        </td>
+                        <td>
+                          <label for="check55">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check56" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check56"><strong>Concepto 56</strong></label>
+                        </td>
+                        <td>
+                          <label for="check56">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check57" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check57"><strong>Concepto 57</strong></label>
+                        </td>
+                        <td>
+                          <label for="check57">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check58" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check58"><strong>Concepto 58</strong></label>
+                        </td>
+                        <td>
+                          <label for="check58">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check59" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check59"><strong>Concepto 59</strong></label>
+                        </td>
+                        <td>
+                          <label for="check59">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check60" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check60"><strong>Concepto 60</strong></label>
+                        </td>
+                        <td>
+                          <label for="check60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check61" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check61"><strong>Concepto 61</strong></label>
+                        </td>
+                        <td>
+                          <label for="check61">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check62" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check62"><strong>Concepto 62</strong></label>
+                        </td>
+                        <td>
+                          <label for="check62">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check63" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check63"><strong>Concepto 63</strong></label>
+                        </td>
+                        <td>
+                          <label for="check63">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check64" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check64"><strong>Concepto 64</strong></label>
+                        </td>
+                        <td>
+                          <label for="check64">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check65" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check65"><strong>Concepto 65</strong></label>
+                        </td>
+                        <td>
+                          <label for="check65">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check66" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check66"><strong>Concepto 66</strong></label>
+                        </td>
+                        <td>
+                          <label for="check66">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check67" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check67"><strong>Concepto 67</strong></label>
+                        </td>
+                        <td>
+                          <label for="check67">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check68" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check68"><strong>Concepto 68</strong></label>
+                        </td>
+                        <td>
+                          <label for="check68">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check69" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check69"><strong>Concepto 69</strong></label>
+                        </td>
+                        <td>
+                          <label for="check69">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check70" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check70"><strong>Concepto 70</strong></label>
+                        </td>
+                        <td>
+                          <label for="check70">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check71" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check71"><strong>Concepto 71</strong></label>
+                        </td>
+                        <td>
+                          <label for="check71">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check72" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check72"><strong>Concepto 72</strong></label>
+                        </td>
+                        <td>
+                          <label for="check72">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check73" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check73"><strong>Concepto 73</strong></label>
+                        </td>
+                        <td>
+                          <label for="check73">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check74" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check74"><strong>Concepto 74</strong></label>
+                        </td>
+                        <td>
+                          <label for="check74">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check75" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check75"><strong>Concepto 75</strong></label>
+                        </td>
+                        <td>
+                          <label for="check75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check76" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check76"><strong>Concepto 76</strong></label>
+                        </td>
+                        <td>
+                          <label for="check76">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check77" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check77"><strong>Concepto 77</strong></label>
+                        </td>
+                        <td>
+                          <label for="check77">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check78" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check78"><strong>Concepto 78</strong></label>
+                        </td>
+                        <td>
+                          <label for="check78">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" id="check79" class="onCheckRow">
+                        </td>
+                        <td>
+                          <label for="check79"><strong>Concepto 79</strong></label>
+                        </td>
+                        <td>
+                          <label for="check79">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit voluptas sit minus, dicta expedita incidunt doloremque dolorum excepturi, quidem porro et vitae rerum? Sed impedit numquam nihil quidem in.</label>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="_/js/_/jquery.js"></script>
+    <script src="_/js/_/jquery-ui.js"></script>
+    <script src="_/js/_/bootstrap.min.js"></script>
+    <script src="_/js/_/dropzone.js"></script>
+    <script src="_/js/_/perfect-scrollbar.js"></script>
+    <script src="_/js/_/tablesaw.js"></script>
+    <script src="_/js/_/multi-select.js"></script>
+    <script src="_/js/_/quicksearch.js"></script>
+    <script src="_/js/_/swipebox.js"></script>
+    <script src="_/js/script.js"></script>
+  </div>
+</body>

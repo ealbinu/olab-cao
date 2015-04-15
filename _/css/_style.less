@@ -75,7 +75,7 @@ input, textarea, select {
 	}
 	
 	#bottomBar{
-		.background-image(linear-gradient(to bottom, @w 0%, @w/1.05 100%));
+		.background-image(linear-gradient(to bottom, @w 0%, @w/1.05 100%)) !important;
 	}
 	.subtitle{
 		position: fixed;
@@ -438,7 +438,12 @@ table{width: 100%;}
 }
 .posr{position: relative;}
 .db{display: block;}
+.di{display: inline;}
 .limitHeight{
 	max-height: 600px;
 	overflow-y: auto;
+}
+
+.bg-select{
+	background: @brand-success;
 }

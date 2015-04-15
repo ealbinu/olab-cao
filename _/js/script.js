@@ -28,9 +28,18 @@ $(function(){
 		$('.imgbox').swipebox();
 	}
 	
-	
 
-	
+	//Row selection on tables
+	if( $('.onCheckRow').length>0 ){
+		$('.onCheckRow').change(function(){
+			console.log( $(this).prop('checked') );
+			if($(this).prop('checked')){
+				$(this).parent().parent().addClass('bg-select');
+			} else {
+				$(this).parent().parent().removeClass('bg-select');
+			}
+		});
+	}
 	
 	
 	//Sliders jqueryui - personalizar utilizando data-'s desde html
